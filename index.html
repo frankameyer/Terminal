@@ -1,0 +1,1548 @@
+ <!doctype html>
+<html lang="de">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initiale-scale=1">
+		<script src="https://code.jquery.com/jquery-latest.js"></script>
+		<link rel="stylesheet" href="main.css">
+
+		<title> Rauch </title>
+
+
+		<script>
+
+			$(document).ready(function(){
+
+
+					$('#zweit').hide();
+					$('#maxiv').hide();
+					$('#maxi_auswahl').hide();
+					$('#zero_maxi_button').hide();
+					$('#one_maxi_button').hide();
+					$('#two_maxi_button').hide();
+					$('#wechsel_button').hide();
+					$('#settings').hide();
+					$('#settings_button_on').hide();
+					$('#schwarzfilter').hide();
+
+
+
+
+					//Wechsel 0&1
+						$('#wechsel').click(function(){
+
+
+								$('#right_large').animate({
+									marginLeft: '-=22.91em'
+								});
+
+								$('#left_large').animate({
+									marginLeft: '+=22.91em'
+								});
+								var left_large_img = $('#left_large').attr("src");
+								var left_large_right = left_large_img.replace("left_large", "right_large");
+								$('#left_large').attr("src", left_large_right);
+								var right_large_img = $('#right_large').attr("src");
+								var right_large_left = right_large_img.replace("right_large", "left_large");
+								$('#right_large').attr("src", right_large_left);
+
+								var right_large_index = $('#right_large').attr("style");
+								var right_large_index_new = right_large_index.replace("z-index: 11", "z-index: 10");
+								$('#right_large').attr("style", right_large_index_new);
+								var left_large_index = $('#left_large').attr("style");
+								var left_large_index_new = left_large_index.replace("z-index: 10", "z-index: 11");
+								$('#left_large').attr("style", left_large_index_new);
+
+
+								$('#left_large').attr("id", "right_large_temp" );
+								$('#right_large').attr("id", "left_large" );
+								$('#right_large_temp').attr("id", "right_large" );
+
+						});
+
+
+
+					//Wechsel 0&2
+
+
+						$('#one_button').click(function (){
+							$('#one_small').animate({
+								marginTop: '-=17.63em',
+							    marginLeft: '-=3.2em',
+								width: '+=11.05em'
+							});
+
+								$('#left_large').animate({
+									marginTop: '+=17.63em',
+									marginLeft: '+=3.2em',
+									width: '-=11.05em'
+								});
+
+
+							var one_small_img = $('#one_small').attr("src");
+							var one_small_large = one_small_img.replace("small", "left_large");
+							$('#one_small').attr("src", one_small_large);
+							var left_large_img = $('#left_large').attr("src");
+							var left_large_small = left_large_img.replace("left_large", "small");
+							$('#left_large').attr("src", left_large_small);
+							var one_small_index = $('#one_small').attr("style");
+							var one_small_index_new = one_small_index.replace("z-index: 1", "z-index: 10");
+							$('#one_small').attr("style", one_small_index_new);
+							var left_large_index = $('#left_large').attr("style");
+							var left_large_index_new = left_large_index.replace("z-index: 10", "z-index: 1");
+							$('#left_large').attr("style", left_large_index_new);
+
+
+							$('#one_small').attr("id", "one_small_temp" );
+							$('#left_large').attr("id", "one_small" );
+							$('#one_small_temp').attr("id", "left_large" );
+
+
+						});
+
+
+
+					//Wechsel 0&3
+						$('#two_button').click(function() {
+							$('#two_small').animate({
+								marginTop: '-=17.63em',
+								marginLeft: '-=15.08em',
+								width: '+=11.05em'
+							});
+							$('#left_large').animate({
+								marginTop: '+=17.63em',
+							    marginLeft: '+=15.08em',
+								width: '-=11.05em'
+
+
+							});
+
+							var left_large_img = $('#left_large').attr("src");
+							var left_large_small = left_large_img.replace("left_large", "small");
+							$('#left_large').attr("src", left_large_small);
+							var two_small_img = $('#two_small').attr("src");
+							var two_small_large = two_small_img.replace("small", "left_large");
+							$('#two_small').attr("src", two_small_large);
+							var two_small_index = $('#two_small').attr("style");
+							var two_small_index_new = two_small_index.replace("z-index: 2", "z-index: 10");
+							$('#two_small').attr("style", two_small_index_new);
+							var left_large_index = $('#left_large').attr("style");
+							var left_large_index_new = left_large_index.replace("z-index: 10", "z-index: 2");
+							$('#left_large').attr("style", left_large_index_new);
+
+							$('#two_small').attr("id", "two_small_temp" );
+							$('#left_large').attr("id", "two_small" );
+							$('#two_small_temp').attr("id", "left_large" );
+						});
+
+					//Wechsel 0&4
+						$('#three_button').click(function() {
+							$('#three_small').animate({
+								marginTop: '-=17.63em',
+								marginLeft: '-=26.96em',
+								width: '+=11.05em'
+							});
+
+							$('#left_large').animate({
+								marginTop: '+=17.63em',
+							    marginLeft: '+=26.96em',
+								width: '-=11.05em'
+
+							});
+							var left_large_img = $('#left_large').attr("src");
+							var left_large_small = left_large_img.replace("left_large", "small");
+							$('#left_large').attr("src", left_large_small);
+							var three_small_img = $('#three_small').attr("src");
+							var three_small_large = three_small_img.replace("small", "left_large");
+							$('#three_small').attr("src", three_small_large);
+							var three_small_index = $('#three_small').attr("style");
+							var three_small_index_new = three_small_index.replace("z-index: 3", "z-index: 10");
+							$('#three_small').attr("style", three_small_index_new);
+							var left_large_index = $('#left_large').attr("style");
+							var left_large_index_new = left_large_index.replace("z-index: 10", "z-index: 3");
+							$('#left_large').attr("style", left_large_index_new);
+
+
+							$('#three_small').attr("id", "three_small_temp" );
+							$('#left_large').attr("id", "three_small" );
+							$('#three_small_temp').attr("id", "left_large" );
+						});
+
+
+
+
+
+
+					//Wechsel zu Maxiview
+						$('#wechsel').mousedown(function(e){
+							clearTimeout(this.downTimer);
+							this.downTimer = setTimeout(function() {
+
+
+
+
+								$('#left_large').animate({
+									width: '-=12.3em',
+									marginLeft: '+=0.5em'
+								});
+								var left_large_img = $('#left_large').attr("src");
+								var zero_small_maxi_img = left_large_img.replace("normalview/left_large", "maxiview/small");
+								$('#left_large').attr("src", zero_small_maxi_img);
+								var left_large_index = $('#left_large').attr("style");
+								var left_large_index_new = left_large_index.replace("z-index: 10", "z-index: 0");
+								$('#left_large').attr("style", left_large_index_new);
+								var left_large_id = $('#left_large').attr("id");
+								var zero_small_maxi_id = left_large_id.replace("left_large", "zero_small_maxi");
+								$('#left_large').attr("id", zero_small_maxi_id);
+
+
+								$('#one_small').animate({
+									width: '-=1.25em',
+									marginTop: '-=9.58em',
+									marginLeft: '-=2.7em'
+
+								});
+								var one_small_img = $('#one_small').attr("src");
+								var one_small_maxi_img = one_small_img.replace("normalview/small", "maxiview/small");
+								$('#one_small').attr("src", one_small_maxi_img);
+								var one_small_id = $('#one_small').attr("id");
+								var one_small_maxi_id = one_small_id.replace("one_small", "one_small_maxi");
+								$('#one_small').attr("id", one_small_maxi_id);
+
+
+
+								$('#right_large').animate({
+									width: '+=11.4em',
+									marginLeft: '-=11.31em'
+								});
+								var right_large_img = $('#right_large').attr("src");
+								var right_large_maxi_img = right_large_img.replace("normalview/right_large", "maxiview/large");
+								$('#right_large').attr("src", right_large_maxi_img);
+								var right_large_index = $('#right_large').attr("style");
+								var right_large_index_new = right_large_index.replace("z-index: 11", "z-index: 10");
+								$('#right_large').attr("style", right_large_index_new);
+								var right_large_id = $('#right_large').attr("id");
+								var right_large_maxi_id = right_large_id.replace("right_large", "right_large_maxi");
+								$('#right_large').attr("id", right_large_maxi_id);
+
+								$('#three_small').animate({
+									width: '-=188em',
+									marginTop: '+=6.33em',
+									marginLeft: '-=26.45em'
+								});
+								var three_small_img = $('#three_small').attr("src");
+								var three_small_maxi_img = three_small_img.replace("normalview/small", "maxiview/small");
+								$('#three_small').attr("src", three_small_maxi_img);
+								var three_small_id = $('#three_small').attr("id");
+								var three_small_maxi_id = three_small_id.replace("three_small", "three_small_maxi");
+								$('#three_small').attr("id", three_small_maxi_id);
+
+
+								$('#auswahl').hide();
+								$('#maxi_auswahl').show();
+
+								$('#wechsel_button').show();
+								$('#one_button').hide();
+								$('#two_button').hide();
+								$('#three_button').hide();
+
+								$('#zero_maxi_button').show();
+								$('#one_maxi_button').show();
+								$('#two_maxi_button').show();
+
+
+								$('#two_small').animate({
+									width: '-=1.25em',
+									marginTop: '-=1.53em',
+									marginLeft: '-=14.58em'
+								});
+								var two_small_img = $('#two_small').attr("src");
+								var two_small_maxi_img = two_small_img.replace("normalview/small", "maxiview/small");
+								$('#two_small').attr("src", two_small_maxi_img);
+								var two_small_id = $('#two_small').attr("id");
+								var two_small_maxi_id = two_small_id.replace("two_small", "two_small_maxi");
+								$('#two_small').attr("id", two_small_maxi_id);
+
+
+
+
+
+							}, 1000);
+						}).mouseup(function(e) {
+							clearTimeout(this.downTimer);
+						});
+
+
+
+					//Wechsel zu Normalview
+						$('#wechsel_button').mousedown(function(e){
+							clearTimeout(this.downTimer);
+							this.downTimer = setTimeout(function() {
+
+							$('#wechsel_button').hide();
+							$('#zero_maxi_button').hide();
+							$('#one_maxi_button').hide();
+							$('#two_maxi_button').hide();
+							$('#one_button').show();
+							$('#two_button').show();
+							$('#three_button').show();
+
+							$('#zero_small_maxi').animate({
+								width: '+=12.3em',
+								marginLeft: '-=0.5em'
+							});
+							var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+							var left_large_img = zero_small_maxi_img.replace("maxiview/small", "normalview/left_large");
+							$('#zero_small_maxi').attr("src", left_large_img);
+							var zero_small_maxi_id = $('#zero_small_maxi').attr("id");
+							var left_large_id = zero_small_maxi_id.replace("zero_small_maxi", "left_large");
+							$('#zero_small_maxi').attr("id", left_large_id);
+
+							$('#two_small_maxi').animate({
+								width: '+=1.25em',
+								marginTop: '+=1.53em',
+								marginLeft: '+=14.58em'
+							});
+							var two_small_maxi_img = $('#two_small_maxi').attr("src");
+							var two_small_img = two_small_maxi_img.replace("maxiview/small", "normalview/small");
+							$('#two_small_maxi').attr("src", two_small_img);
+							var two_small_maxi_id = $('#two_small_maxi').attr("id");
+							var two_small_id = two_small_maxi_id.replace("two_small_maxi", "two_small");
+							$('#two_small_maxi').attr("id", two_small_id);
+
+							$('#three_small_maxi').animate({
+								width: '+=188',
+								marginTop: '-=6.33em',
+								marginLeft: '+=26.45em'
+							});
+							var three_small_maxi_img = $('#three_small_maxi').attr("src");
+							var three_small_img = three_small_maxi_img.replace("maxiview/small", "normalview/small");
+							$('#three_small_maxi').attr("src", three_small_img);
+							var three_small_maxi_id = $('#three_small_maxi').attr("id");
+							var three_small_id = three_small_maxi_id.replace("three_small_maxi", "three_small");
+							$('#three_small_maxi').attr("id", three_small_id);
+
+
+							$('#right_large_maxi').animate({
+								width: '-=11.4em',
+								marginLeft: '+=11.31em'
+							});
+							var right_large_maxi_img = $('#right_large_maxi').attr("src");
+							var right_large_img = right_large_maxi_img.replace("maxiview/large", "normalview/right_large");
+							$('#right_large_maxi').attr("src", right_large_img);
+							var right_large_maxi_id = $('#right_large_maxi').attr("id");
+							var right_large_id = right_large_maxi_id.replace("right_large_maxi", "right_large");
+							$('#right_large_maxi').attr("id", right_large_id);
+
+							$('#one_small_maxi').animate({
+								width: '+=1.25em',
+								marginTop: '+=9.58em',
+								marginLeft: '+=2.7em'
+							});
+							var one_small_maxi_img = $('#one_small_maxi').attr("src");
+							var one_small_img = one_small_maxi_img.replace("maxiview/small","normalview/small");
+							$('#one_small_maxi').attr("src", one_small_img);
+							var one_small_maxi_id = $('#one_small_maxi').attr("id");
+							var one_small_id = one_small_maxi_id.replace("one_small_maxi", "one_small");
+							$('#one_small_maxi').attr("id", one_small_id);
+
+
+
+							$('#maxi_auswahl').hide();
+							$('#auswahl').show();
+
+
+
+
+
+
+
+
+
+							}, 1000);
+						}).mouseup(function(e) {
+							clearTimeout(this.downTimer);
+
+						});
+
+
+						//Wechsel zero_maxi & right_large
+
+
+						$('#zero_maxi_button').click(function (){
+							$('#zero_small_maxi').animate({
+									marginLeft: '+=11.1em',
+									width: '+=23.7em'
+								});
+							$('#right_large_maxi').animate({
+								marginLeft: '-=11.1em',
+								width: '-=23.7em'
+							});
+
+							var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+							var zero_small_maxi_rightlarge = zero_small_maxi_img.replace("small", "large");
+							$('#zero_small_maxi').attr("src", zero_small_maxi_rightlarge);
+							var right_large_maxi_img = $('#right_large_maxi').attr("src");
+							var right_large_maxi_small = right_large_maxi_img.replace("large", "small");
+							$('#right_large_maxi').attr("src", right_large_maxi_small);
+
+							var zero_small_maxi_index = $('#zero_small_maxi').attr("style");
+							var zero_small_maxi_index_new = zero_small_maxi_index.replace("z-index: 0", "z-index: 10");
+							$('#zero_small_maxi').attr("style", zero_small_maxi_index_new);
+							var right_large_maxi_index = $('#right_large_maxi').attr("style");
+							var right_large_maxi_index_new = right_large_maxi_index.replace("z-index: 10", "z-index: 0");
+							$('#right_large_maxi').attr("style", right_large_maxi_index_new);
+
+
+							$('#zero_small_maxi').attr("id", "right_large_maxi_temp1" );
+							$('#right_large_maxi').attr("id", "zero_small_maxi" );
+							$('#right_large_maxi_temp1').attr("id", "right_large_maxi" );
+						});
+
+
+						//Wechsel one_maxi & right_large
+
+
+						$('#one_maxi_button').click(function (){
+							$('#one_small_maxi').animate({
+									marginLeft: '+=11.1em',
+									marginTop: '-=8.05em',
+									width: '+=23.7em'
+								});
+							$('#right_large_maxi').animate({
+								marginLeft: '-=11.1em',
+								marginTop: '+=8.05em',
+								width: '-=23.7em'
+							});
+
+
+							var one_small_maxi_index = $('#one_small_maxi').attr("style");
+							var one_small_maxi_index_new = one_small_maxi_index.replace("z-index: 1", "z-index: 10");
+							$('#one_small_maxi').attr("style", one_small_maxi_index_new);
+							var right_large_maxi_index = $('#right_large_maxi').attr("style");
+							var right_large_maxi_index_new = right_large_maxi_index.replace("z-index: 10", "z-index: 1");
+							$('#right_large_maxi').attr("style", right_large_maxi_index_new);
+							var one_small_maxi_img = $('#one_small_maxi').attr("src");
+							var one_small_maxi_rightlarge = one_small_maxi_img.replace("small", "large");
+							$('#one_small_maxi').attr("src", one_small_maxi_rightlarge);
+							var right_large_maxi_img = $('#right_large_maxi').attr("src");
+							var right_large_maxi_small = right_large_maxi_img.replace("large", "small");
+							$('#right_large_maxi').attr("src", right_large_maxi_small);
+
+
+							$('#one_small_maxi').attr("id", "right_large_maxi_temp1" );
+							$('#right_large_maxi').attr("id", "one_small_maxi" );
+							$('#right_large_maxi_temp1').attr("id", "right_large_maxi" );
+						});
+
+						//Wechsel two_maxi & right_large
+
+
+						$('#two_maxi_button').click(function (){
+							$('#two_small_maxi').animate({
+									marginLeft: '+=11.1em',
+									marginTop: '-=16.1em',
+									width: '+=23.7em'
+								});
+							$('#right_large_maxi').animate({
+								marginLeft: '-=11.1em',
+								marginTop: '+=16.1em',
+								width: '-=23.7em'
+							});
+
+
+
+							var two_small_maxi_index = $('#two_small_maxi').attr("style");
+							var two_small_maxi_index_new = two_small_maxi_index.replace("z-index: 2", "z-index: 10");
+							$('#two_small_maxi').attr("style", two_small_maxi_index_new);
+							var right_large_maxi_index = $('#right_large_maxi').attr("style");
+							var right_large_maxi_index_new = right_large_maxi_index.replace("z-index: 10", "z-index: 2");
+							$('#right_large_maxi').attr("style", right_large_maxi_index_new);
+							var two_small_maxi_img = $('#two_small_maxi').attr("src");
+							var two_small_maxi_rightlarge = two_small_maxi_img.replace("small", "large");
+							$('#two_small_maxi').attr("src", two_small_maxi_rightlarge);
+							var right_large_maxi_img = $('#right_large_maxi').attr("src");
+							var right_large_maxi_small = right_large_maxi_img.replace("large", "small");
+							$('#right_large_maxi').attr("src", right_large_maxi_small);
+
+
+							$('#two_small_maxi').attr("id", "right_large_maxi_temp1" );
+							$('#right_large_maxi').attr("id", "two_small_maxi" );
+							$('#right_large_maxi_temp1').attr("id", "right_large_maxi" );
+						});
+
+
+            //Wechsel ZU Rauch
+            $('#rauch_button').click(function (){
+							if ($('#grimme_on').is(':visible')) {
+								var left_large_img = $('#left_large').attr("src");
+								var left_large_next = left_large_img.replace("grimme", "rauch");
+								$('#left_large').attr("src", left_large_next);
+								var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+								var zero_small_maxi_next = zero_small_maxi_img.replace("grimme", "rauch");
+								$('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+								var right_large_img = $('#right_large').attr("src");
+								var right_large_next = right_large_img.replace("grimme", "rauch");
+								$('#right_large').attr("src", right_large_next);
+								var right_large_maxi_img = $('#right_large_maxi').attr("src");
+								var right_large_maxi_next = right_large_maxi_img.replace("grimme", "rauch");
+								$('#right_large_maxi').attr("src", right_large_maxi_next);
+
+								var one_small_img = $('#one_small').attr("src");
+								var one_small_next = one_small_img.replace("grimme", "rauch");
+								$('#one_small').attr("src", one_small_next);
+								var one_small_maxi_img = $('#one_small_maxi').attr("src");
+								var one_small_maxi_next = one_small_maxi_img.replace("grimme", "rauch");
+								$('#one_small_maxi').attr("src", one_small_maxi_next);
+
+								var two_small_img = $('#two_small').attr("src");
+								var two_small_next = two_small_img.replace("grimme", "rauch");
+								$('#two_small').attr("src", two_small_next);
+								var two_small_maxi_img = $('#two_small_maxi').attr("src");
+								var two_small_maxi_next = two_small_maxi_img.replace("grimme", "rauch");
+								$('#two_small_maxi').attr("src", two_small_maxi_next);
+
+								var three_small_img = $('#three_small').attr("src");
+								var three_small_next = three_small_img.replace("grimme", "rauch");
+								$('#three_small').attr("src", three_small_next);
+								var three_small_maxi_img = $('#three_small_maxi').attr("src");
+								var three_small_maxi_next = three_small_maxi_img.replace("grimme", "rauch");
+								$('#three_small_maxi').attr("src", three_small_maxi_next);
+
+								var next_button = $('#rauch_off').attr("src");
+								var next_button_on = next_button.replace("off", "on");
+								$('#rauch_off').attr("src", next_button_on);
+								$('#rauch_off').attr("id", "rauch_on" );
+								var last_button = $('#grimme_on').attr("src");
+								var last_button_off = last_button.replace("on", "off");
+								$('#grimme_on').attr("src", last_button_off);
+								$('#grimme_on').attr("id", "grimme_off" );
+
+							} else if ($('#krone_on').is(':visible')){
+                var left_large_img = $('#left_large').attr("src");
+								var left_large_next = left_large_img.replace("krone", "rauch");
+								$('#left_large').attr("src", left_large_next);
+								var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+								var zero_small_maxi_next = zero_small_maxi_img.replace("krone", "rauch");
+								$('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+								var right_large_img = $('#right_large').attr("src");
+								var right_large_next = right_large_img.replace("krone", "rauch");
+								$('#right_large').attr("src", right_large_next);
+								var right_large_maxi_img = $('#right_large_maxi').attr("src");
+								var right_large_maxi_next = right_large_maxi_img.replace("krone", "rauch");
+								$('#right_large_maxi').attr("src", right_large_maxi_next);
+
+								var one_small_img = $('#one_small').attr("src");
+								var one_small_next = one_small_img.replace("krone", "rauch");
+								$('#one_small').attr("src", one_small_next);
+								var one_small_maxi_img = $('#one_small_maxi').attr("src");
+								var one_small_maxi_next = one_small_maxi_img.replace("krone", "rauch");
+								$('#one_small_maxi').attr("src", one_small_maxi_next);
+
+								var two_small_img = $('#two_small').attr("src");
+								var two_small_next = two_small_img.replace("krone", "rauch");
+								$('#two_small').attr("src", two_small_next);
+								var two_small_maxi_img = $('#two_small_maxi').attr("src");
+								var two_small_maxi_next = two_small_maxi_img.replace("krone", "rauch");
+								$('#two_small_maxi').attr("src", two_small_maxi_next);
+
+								var three_small_img = $('#three_small').attr("src");
+								var three_small_next = three_small_img.replace("krone", "rauch");
+								$('#three_small').attr("src", three_small_next);
+								var three_small_maxi_img = $('#three_small_maxi').attr("src");
+								var three_small_maxi_next = three_small_maxi_img.replace("krone", "rauch");
+								$('#three_small_maxi').attr("src", three_small_maxi_next);
+
+								var next_button = $('#rauch_off').attr("src");
+								var next_button_on = next_button.replace("off", "on");
+								$('#rauch_off').attr("src", next_button_on);
+								$('#rauch_off').attr("id", "rauch_on" );
+								var last_button = $('#krone_on').attr("src");
+								var last_button_off = last_button.replace("on", "off");
+								$('#krone_on').attr("src", last_button_off);
+								$('#krone_on').attr("id", "krone_off" );
+
+              } else if ($('#kuhn_on').is(':visible')){
+                var left_large_img = $('#left_large').attr("src");
+								var left_large_next = left_large_img.replace("kuhn", "rauch");
+								$('#left_large').attr("src", left_large_next);
+								var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+								var zero_small_maxi_next = zero_small_maxi_img.replace("kuhn", "rauch");
+								$('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+								var right_large_img = $('#right_large').attr("src");
+								var right_large_next = right_large_img.replace("kuhn", "rauch");
+								$('#right_large').attr("src", right_large_next);
+								var right_large_maxi_img = $('#right_large_maxi').attr("src");
+								var right_large_maxi_next = right_large_maxi_img.replace("kuhn", "rauch");
+								$('#right_large_maxi').attr("src", right_large_maxi_next);
+
+								var one_small_img = $('#one_small').attr("src");
+								var one_small_next = one_small_img.replace("kuhn", "rauch");
+								$('#one_small').attr("src", one_small_next);
+								var one_small_maxi_img = $('#one_small_maxi').attr("src");
+								var one_small_maxi_next = one_small_maxi_img.replace("kuhn", "rauch");
+								$('#one_small_maxi').attr("src", one_small_maxi_next);
+
+								var two_small_img = $('#two_small').attr("src");
+								var two_small_next = two_small_img.replace("kuhn", "rauch");
+								$('#two_small').attr("src", two_small_next);
+								var two_small_maxi_img = $('#two_small_maxi').attr("src");
+								var two_small_maxi_next = two_small_maxi_img.replace("kuhn", "rauch");
+								$('#two_small_maxi').attr("src", two_small_maxi_next);
+
+								var three_small_img = $('#three_small').attr("src");
+								var three_small_next = three_small_img.replace("kuhn", "rauch");
+								$('#three_small').attr("src", three_small_next);
+								var three_small_maxi_img = $('#three_small_maxi').attr("src");
+								var three_small_maxi_next = three_small_maxi_img.replace("kuhn", "rauch");
+								$('#three_small_maxi').attr("src", three_small_maxi_next);
+
+								var next_button = $('#rauch_off').attr("src");
+								var next_button_on = next_button.replace("off", "on");
+								$('#rauch_off').attr("src", next_button_on);
+								$('#rauch_off').attr("id", "rauch_on" );
+								var last_button = $('#kuhn_on').attr("src");
+								var last_button_off = last_button.replace("on", "off");
+								$('#kuhn_on').attr("src", last_button_off);
+								$('#kuhn_on').attr("id", "kuhn_off" );
+
+              }  else if ($('#lemken_on').is(':visible')){
+                var left_large_img = $('#left_large').attr("src");
+								var left_large_next = left_large_img.replace("lemken", "rauch");
+								$('#left_large').attr("src", left_large_next);
+								var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+								var zero_small_maxi_next = zero_small_maxi_img.replace("lemken", "rauch");
+								$('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+								var right_large_img = $('#right_large').attr("src");
+								var right_large_next = right_large_img.replace("lemken", "rauch");
+								$('#right_large').attr("src", right_large_next);
+								var right_large_maxi_img = $('#right_large_maxi').attr("src");
+								var right_large_maxi_next = right_large_maxi_img.replace("lemken", "rauch");
+								$('#right_large_maxi').attr("src", right_large_maxi_next);
+
+								var one_small_img = $('#one_small').attr("src");
+								var one_small_next = one_small_img.replace("lemken", "rauch");
+								$('#one_small').attr("src", one_small_next);
+								var one_small_maxi_img = $('#one_small_maxi').attr("src");
+								var one_small_maxi_next = one_small_maxi_img.replace("lemken", "rauch");
+								$('#one_small_maxi').attr("src", one_small_maxi_next);
+
+								var two_small_img = $('#two_small').attr("src");
+								var two_small_next = two_small_img.replace("lemken", "rauch");
+								$('#two_small').attr("src", two_small_next);
+								var two_small_maxi_img = $('#two_small_maxi').attr("src");
+								var two_small_maxi_next = two_small_maxi_img.replace("lemken", "rauch");
+								$('#two_small_maxi').attr("src", two_small_maxi_next);
+
+								var three_small_img = $('#three_small').attr("src");
+								var three_small_next = three_small_img.replace("lemken", "rauch");
+								$('#three_small').attr("src", three_small_next);
+								var three_small_maxi_img = $('#three_small_maxi').attr("src");
+								var three_small_maxi_next = three_small_maxi_img.replace("lemken", "rauch");
+								$('#three_small_maxi').attr("src", three_small_maxi_next);
+
+								var next_button = $('#rauch_off').attr("src");
+								var next_button_on = next_button.replace("off", "on");
+								$('#rauch_off').attr("src", next_button_on);
+								$('#rauch_off').attr("id", "rauch_on" );
+								var last_button = $('#lemken_on').attr("src");
+								var last_button_off = last_button.replace("on", "off");
+								$('#lemken_on').attr("src", last_button_off);
+								$('#lemken_on').attr("id", "lemken_off" );
+              } else{}
+						});
+
+						//Wechsel zu Grimme
+						$('#grimme_button').click(function (){
+							if ($('#rauch_on').is(':visible')) {
+								var left_large_img = $('#left_large').attr("src");
+								var left_large_next = left_large_img.replace("rauch", "grimme");
+								$('#left_large').attr("src", left_large_next);
+								var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+								var zero_small_maxi_next = zero_small_maxi_img.replace("rauch", "grimme");
+								$('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+								var right_large_img = $('#right_large').attr("src");
+								var right_large_next = right_large_img.replace("rauch", "grimme");
+								$('#right_large').attr("src", right_large_next);
+								var right_large_maxi_img = $('#right_large_maxi').attr("src");
+								var right_large_maxi_next = right_large_maxi_img.replace("rauch", "grimme");
+								$('#right_large_maxi').attr("src", right_large_maxi_next);
+
+								var one_small_img = $('#one_small').attr("src");
+								var one_small_next = one_small_img.replace("rauch", "grimme");
+								$('#one_small').attr("src", one_small_next);
+								var one_small_maxi_img = $('#one_small_maxi').attr("src");
+								var one_small_maxi_next = one_small_maxi_img.replace("rauch", "grimme");
+								$('#one_small_maxi').attr("src", one_small_maxi_next);
+
+								var two_small_img = $('#two_small').attr("src");
+								var two_small_next = two_small_img.replace("rauch", "grimme");
+								$('#two_small').attr("src", two_small_next);
+								var two_small_maxi_img = $('#two_small_maxi').attr("src");
+								var two_small_maxi_next = two_small_maxi_img.replace("rauch", "grimme");
+								$('#two_small_maxi').attr("src", two_small_maxi_next);
+
+								var three_small_img = $('#three_small').attr("src");
+								var three_small_next = three_small_img.replace("rauch", "grimme");
+								$('#three_small').attr("src", three_small_next);
+								var three_small_maxi_img = $('#three_small_maxi').attr("src");
+								var three_small_maxi_next = three_small_maxi_img.replace("rauch", "grimme");
+								$('#three_small_maxi').attr("src", three_small_maxi_next);
+
+								var next_button = $('#grimme_off').attr("src");
+								var next_button_on = next_button.replace("off", "on");
+								$('#grimme_off').attr("src", next_button_on);
+								$('#grimme_off').attr("id", "grimme_on" );
+								var last_button = $('#rauch_on').attr("src");
+								var last_button_off = last_button.replace("on", "off");
+								$('#rauch_on').attr("src", last_button_off);
+								$('#rauch_on').attr("id", "rauch_off" );
+
+							} else if ($('#krone_on').is(':visible')) {
+								var left_large_img = $('#left_large').attr("src");
+								var left_large_next = left_large_img.replace("krone", "grimme");
+								$('#left_large').attr("src", left_large_next);
+								var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+								var zero_small_maxi_next = zero_small_maxi_img.replace("krone", "grimme");
+								$('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+								var right_large_img = $('#right_large').attr("src");
+								var right_large_next = right_large_img.replace("krone", "grimme");
+								$('#right_large').attr("src", right_large_next);
+								var right_large_maxi_img = $('#right_large_maxi').attr("src");
+								var right_large_maxi_next = right_large_maxi_img.replace("krone", "grimme");
+								$('#right_large_maxi').attr("src", right_large_maxi_next);
+
+								var one_small_img = $('#one_small').attr("src");
+								var one_small_next = one_small_img.replace("krone", "grimme");
+								$('#one_small').attr("src", one_small_next);
+								var one_small_maxi_img = $('#one_small_maxi').attr("src");
+								var one_small_maxi_next = one_small_maxi_img.replace("krone", "grimme");
+								$('#one_small_maxi').attr("src", one_small_maxi_next);
+
+								var two_small_img = $('#two_small').attr("src");
+								var two_small_next = two_small_img.replace("krone", "grimme");
+								$('#two_small').attr("src", two_small_next);
+								var two_small_maxi_img = $('#two_small_maxi').attr("src");
+								var two_small_maxi_next = two_small_maxi_img.replace("krone", "grimme");
+								$('#two_small_maxi').attr("src", two_small_maxi_next);
+
+								var three_small_img = $('#three_small').attr("src");
+								var three_small_next = three_small_img.replace("krone", "grimme");
+								$('#three_small').attr("src", three_small_next);
+								var three_small_maxi_img = $('#three_small_maxi').attr("src");
+								var three_small_maxi_next = three_small_maxi_img.replace("krone", "grimme");
+								$('#three_small_maxi').attr("src", three_small_maxi_next);
+
+								var next_button = $('#grimme_off').attr("src");
+								var next_button_on = next_button.replace("off", "on");
+								$('#grimme_off').attr("src", next_button_on);
+								$('#grimme_off').attr("id", "grimme_on" );
+								var last_button = $('#krone_on').attr("src");
+								var last_button_off = last_button.replace("on", "off");
+								$('#krone_on').attr("src", last_button_off);
+								$('#krone_on').attr("id", "krone_off" );
+
+              } else if ($('#lemken_on').is(':visible')) {
+								var left_large_img = $('#left_large').attr("src");
+								var left_large_next = left_large_img.replace("lemken", "grimme");
+								$('#left_large').attr("src", left_large_next);
+								var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+								var zero_small_maxi_next = zero_small_maxi_img.replace("lemken", "grimme");
+								$('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+								var right_large_img = $('#right_large').attr("src");
+								var right_large_next = right_large_img.replace("lemken", "grimme");
+								$('#right_large').attr("src", right_large_next);
+								var right_large_maxi_img = $('#right_large_maxi').attr("src");
+								var right_large_maxi_next = right_large_maxi_img.replace("lemken", "grimme");
+								$('#right_large_maxi').attr("src", right_large_maxi_next);
+
+								var one_small_img = $('#one_small').attr("src");
+								var one_small_next = one_small_img.replace("lemken", "grimme");
+								$('#one_small').attr("src", one_small_next);
+								var one_small_maxi_img = $('#one_small_maxi').attr("src");
+								var one_small_maxi_next = one_small_maxi_img.replace("lemken", "grimme");
+								$('#one_small_maxi').attr("src", one_small_maxi_next);
+
+								var two_small_img = $('#two_small').attr("src");
+								var two_small_next = two_small_img.replace("lemken", "grimme");
+								$('#two_small').attr("src", two_small_next);
+								var two_small_maxi_img = $('#two_small_maxi').attr("src");
+								var two_small_maxi_next = two_small_maxi_img.replace("lemken", "grimme");
+								$('#two_small_maxi').attr("src", two_small_maxi_next);
+
+								var three_small_img = $('#three_small').attr("src");
+								var three_small_next = three_small_img.replace("lemken", "grimme");
+								$('#three_small').attr("src", three_small_next);
+								var three_small_maxi_img = $('#three_small_maxi').attr("src");
+								var three_small_maxi_next = three_small_maxi_img.replace("lemken", "grimme");
+								$('#three_small_maxi').attr("src", three_small_maxi_next);
+
+								var next_button = $('#grimme_off').attr("src");
+								var next_button_on = next_button.replace("off", "on");
+								$('#grimme_off').attr("src", next_button_on);
+								$('#grimme_off').attr("id", "grimme_on" );
+								var last_button = $('#lemken_on').attr("src");
+								var last_button_off = last_button.replace("on", "off");
+								$('#lemken_on').attr("src", last_button_off);
+								$('#lemken_on').attr("id", "lemken_off" );
+
+              } else if ($('#kuhn_on').is(':visible')) {
+								var left_large_img = $('#left_large').attr("src");
+								var left_large_next = left_large_img.replace("kuhn", "grimme");
+								$('#left_large').attr("src", left_large_next);
+								var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+								var zero_small_maxi_next = zero_small_maxi_img.replace("kuhn", "grimme");
+								$('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+								var right_large_img = $('#right_large').attr("src");
+								var right_large_next = right_large_img.replace("kuhn", "grimme");
+								$('#right_large').attr("src", right_large_next);
+								var right_large_maxi_img = $('#right_large_maxi').attr("src");
+								var right_large_maxi_next = right_large_maxi_img.replace("kuhn", "grimme");
+								$('#right_large_maxi').attr("src", right_large_maxi_next);
+
+								var one_small_img = $('#one_small').attr("src");
+								var one_small_next = one_small_img.replace("kuhn", "grimme");
+								$('#one_small').attr("src", one_small_next);
+								var one_small_maxi_img = $('#one_small_maxi').attr("src");
+								var one_small_maxi_next = one_small_maxi_img.replace("kuhn", "grimme");
+								$('#one_small_maxi').attr("src", one_small_maxi_next);
+
+								var two_small_img = $('#two_small').attr("src");
+								var two_small_next = two_small_img.replace("kuhn", "grimme");
+								$('#two_small').attr("src", two_small_next);
+								var two_small_maxi_img = $('#two_small_maxi').attr("src");
+								var two_small_maxi_next = two_small_maxi_img.replace("kuhn", "grimme");
+								$('#two_small_maxi').attr("src", two_small_maxi_next);
+
+								var three_small_img = $('#three_small').attr("src");
+								var three_small_next = three_small_img.replace("kuhn", "grimme");
+								$('#three_small').attr("src", three_small_next);
+								var three_small_maxi_img = $('#three_small_maxi').attr("src");
+								var three_small_maxi_next = three_small_maxi_img.replace("kuhn", "grimme");
+								$('#three_small_maxi').attr("src", three_small_maxi_next);
+
+								var next_button = $('#grimme_off').attr("src");
+								var next_button_on = next_button.replace("off", "on");
+								$('#grimme_off').attr("src", next_button_on);
+								$('#grimme_off').attr("id", "grimme_on" );
+								var last_button = $('#kuhn_on').attr("src");
+								var last_button_off = last_button.replace("on", "off");
+								$('#kuhn_on').attr("src", last_button_off);
+								$('#kuhn_on').attr("id", "kuhn_off" );
+              } else {}
+						});
+
+            //Wechsel zu Krone
+            $('#krone_button').click(function (){
+							if ($('#rauch_on').is(':visible')) {
+								var left_large_img = $('#left_large').attr("src");
+								var left_large_next = left_large_img.replace("rauch", "krone");
+								$('#left_large').attr("src", left_large_next);
+								var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+								var zero_small_maxi_next = zero_small_maxi_img.replace("rauch", "krone");
+								$('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+								var right_large_img = $('#right_large').attr("src");
+								var right_large_next = right_large_img.replace("rauch", "krone");
+								$('#right_large').attr("src", right_large_next);
+								var right_large_maxi_img = $('#right_large_maxi').attr("src");
+								var right_large_maxi_next = right_large_maxi_img.replace("rauch", "krone");
+								$('#right_large_maxi').attr("src", right_large_maxi_next);
+
+								var one_small_img = $('#one_small').attr("src");
+								var one_small_next = one_small_img.replace("rauch", "krone");
+								$('#one_small').attr("src", one_small_next);
+								var one_small_maxi_img = $('#one_small_maxi').attr("src");
+								var one_small_maxi_next = one_small_maxi_img.replace("rauch", "krone");
+								$('#one_small_maxi').attr("src", one_small_maxi_next);
+
+								var two_small_img = $('#two_small').attr("src");
+								var two_small_next = two_small_img.replace("rauch", "krone");
+								$('#two_small').attr("src", two_small_next);
+								var two_small_maxi_img = $('#two_small_maxi').attr("src");
+								var two_small_maxi_next = two_small_maxi_img.replace("rauch", "krone");
+								$('#two_small_maxi').attr("src", two_small_maxi_next);
+
+								var three_small_img = $('#three_small').attr("src");
+								var three_small_next = three_small_img.replace("rauch", "krone");
+								$('#three_small').attr("src", three_small_next);
+								var three_small_maxi_img = $('#three_small_maxi').attr("src");
+								var three_small_maxi_next = three_small_maxi_img.replace("rauch", "krone");
+								$('#three_small_maxi').attr("src", three_small_maxi_next);
+
+								var next_button = $('#krone_off').attr("src");
+								var next_button_on = next_button.replace("off", "on");
+								$('#krone_off').attr("src", next_button_on);
+								$('#krone_off').attr("id", "krone_on" );
+								var last_button = $('#rauch_on').attr("src");
+								var last_button_off = last_button.replace("on", "off");
+								$('#rauch_on').attr("src", last_button_off);
+								$('#rauch_on').attr("id", "rauch_off" );
+
+							} else if ($('#grimme_on').is(':visible')) {
+								var left_large_img = $('#left_large').attr("src");
+								var left_large_next = left_large_img.replace("grimme", "krone");
+								$('#left_large').attr("src", left_large_next);
+								var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+								var zero_small_maxi_next = zero_small_maxi_img.replace("grimme", "krone");
+								$('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+								var right_large_img = $('#right_large').attr("src");
+								var right_large_next = right_large_img.replace("grimme", "krone");
+								$('#right_large').attr("src", right_large_next);
+								var right_large_maxi_img = $('#right_large_maxi').attr("src");
+								var right_large_maxi_next = right_large_maxi_img.replace("grimme", "krone");
+								$('#right_large_maxi').attr("src", right_large_maxi_next);
+
+								var one_small_img = $('#one_small').attr("src");
+								var one_small_next = one_small_img.replace("grimme", "krone");
+								$('#one_small').attr("src", one_small_next);
+								var one_small_maxi_img = $('#one_small_maxi').attr("src");
+								var one_small_maxi_next = one_small_maxi_img.replace("grimme", "krone");
+								$('#one_small_maxi').attr("src", one_small_maxi_next);
+
+								var two_small_img = $('#two_small').attr("src");
+								var two_small_next = two_small_img.replace("grimme", "krone");
+								$('#two_small').attr("src", two_small_next);
+								var two_small_maxi_img = $('#two_small_maxi').attr("src");
+								var two_small_maxi_next = two_small_maxi_img.replace("grimme", "krone");
+								$('#two_small_maxi').attr("src", two_small_maxi_next);
+
+								var three_small_img = $('#three_small').attr("src");
+								var three_small_next = three_small_img.replace("grimme", "krone");
+								$('#three_small').attr("src", three_small_next);
+								var three_small_maxi_img = $('#three_small_maxi').attr("src");
+								var three_small_maxi_next = three_small_maxi_img.replace("grimme", "krone");
+								$('#three_small_maxi').attr("src", three_small_maxi_next);
+
+								var next_button = $('#krone_off').attr("src");
+								var next_button_on = next_button.replace("off", "on");
+								$('#krone_off').attr("src", next_button_on);
+								$('#krone_off').attr("id", "krone_on" );
+								var last_button = $('#grimme_on').attr("src");
+								var last_button_off = last_button.replace("on", "off");
+								$('#grimme_on').attr("src", last_button_off);
+								$('#grimme_on').attr("id", "grimme_off" );
+
+              } else if ($('#lemken_on').is(':visible')) {
+								var left_large_img = $('#left_large').attr("src");
+								var left_large_next = left_large_img.replace("lemken", "krone");
+								$('#left_large').attr("src", left_large_next);
+								var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+								var zero_small_maxi_next = zero_small_maxi_img.replace("lemken", "krone");
+								$('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+								var right_large_img = $('#right_large').attr("src");
+								var right_large_next = right_large_img.replace("lemken", "krone");
+								$('#right_large').attr("src", right_large_next);
+								var right_large_maxi_img = $('#right_large_maxi').attr("src");
+								var right_large_maxi_next = right_large_maxi_img.replace("lemken", "krone");
+								$('#right_large_maxi').attr("src", right_large_maxi_next);
+
+								var one_small_img = $('#one_small').attr("src");
+								var one_small_next = one_small_img.replace("lemken", "krone");
+								$('#one_small').attr("src", one_small_next);
+								var one_small_maxi_img = $('#one_small_maxi').attr("src");
+								var one_small_maxi_next = one_small_maxi_img.replace("lemken", "krone");
+								$('#one_small_maxi').attr("src", one_small_maxi_next);
+
+								var two_small_img = $('#two_small').attr("src");
+								var two_small_next = two_small_img.replace("lemken", "krone");
+								$('#two_small').attr("src", two_small_next);
+								var two_small_maxi_img = $('#two_small_maxi').attr("src");
+								var two_small_maxi_next = two_small_maxi_img.replace("lemken", "krone");
+								$('#two_small_maxi').attr("src", two_small_maxi_next);
+
+								var three_small_img = $('#three_small').attr("src");
+								var three_small_next = three_small_img.replace("lemken", "krone");
+								$('#three_small').attr("src", three_small_next);
+								var three_small_maxi_img = $('#three_small_maxi').attr("src");
+								var three_small_maxi_next = three_small_maxi_img.replace("lemken", "krone");
+								$('#three_small_maxi').attr("src", three_small_maxi_next);
+
+								var next_button = $('#krone_off').attr("src");
+								var next_button_on = next_button.replace("off", "on");
+								$('#krone_off').attr("src", next_button_on);
+								$('#krone_off').attr("id", "krone_on" );
+								var last_button = $('#lemken_on').attr("src");
+								var last_button_off = last_button.replace("on", "off");
+								$('#lemken_on').attr("src", last_button_off);
+								$('#lemken_on').attr("id", "lemken_off" );
+
+              } else if ($('#kuhn_on').is(':visible')) {
+								var left_large_img = $('#left_large').attr("src");
+								var left_large_next = left_large_img.replace("kuhn", "krone");
+								$('#left_large').attr("src", left_large_next);
+								var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+								var zero_small_maxi_next = zero_small_maxi_img.replace("kuhn", "krone");
+								$('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+								var right_large_img = $('#right_large').attr("src");
+								var right_large_next = right_large_img.replace("kuhn", "krone");
+								$('#right_large').attr("src", right_large_next);
+								var right_large_maxi_img = $('#right_large_maxi').attr("src");
+								var right_large_maxi_next = right_large_maxi_img.replace("kuhn", "krone");
+								$('#right_large_maxi').attr("src", right_large_maxi_next);
+
+								var one_small_img = $('#one_small').attr("src");
+								var one_small_next = one_small_img.replace("kuhn", "krone");
+								$('#one_small').attr("src", one_small_next);
+								var one_small_maxi_img = $('#one_small_maxi').attr("src");
+								var one_small_maxi_next = one_small_maxi_img.replace("kuhn", "krone");
+								$('#one_small_maxi').attr("src", one_small_maxi_next);
+
+								var two_small_img = $('#two_small').attr("src");
+								var two_small_next = two_small_img.replace("kuhn", "krone");
+								$('#two_small').attr("src", two_small_next);
+								var two_small_maxi_img = $('#two_small_maxi').attr("src");
+								var two_small_maxi_next = two_small_maxi_img.replace("kuhn", "krone");
+								$('#two_small_maxi').attr("src", two_small_maxi_next);
+
+								var three_small_img = $('#three_small').attr("src");
+								var three_small_next = three_small_img.replace("kuhn", "krone");
+								$('#three_small').attr("src", three_small_next);
+								var three_small_maxi_img = $('#three_small_maxi').attr("src");
+								var three_small_maxi_next = three_small_maxi_img.replace("kuhn", "krone");
+								$('#three_small_maxi').attr("src", three_small_maxi_next);
+
+								var next_button = $('#krone_off').attr("src");
+								var next_button_on = next_button.replace("off", "on");
+								$('#krone_off').attr("src", next_button_on);
+								$('#krone_off').attr("id", "krone_on" );
+								var last_button = $('#kuhn_on').attr("src");
+								var last_button_off = last_button.replace("on", "off");
+								$('#kuhn_on').attr("src", last_button_off);
+								$('#kuhn_on').attr("id", "kuhn_off" );
+              } else {}
+						});
+
+            //Wechsel zu Kuhn
+            $('#kuhn_button').click(function (){
+              if ($('#rauch_on').is(':visible')) {
+                var left_large_img = $('#left_large').attr("src");
+                var left_large_next = left_large_img.replace("rauch", "kuhn");
+                $('#left_large').attr("src", left_large_next);
+                var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+                var zero_small_maxi_next = zero_small_maxi_img.replace("rauch", "kuhn");
+                $('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+                var right_large_img = $('#right_large').attr("src");
+                var right_large_next = right_large_img.replace("rauch", "kuhn");
+                $('#right_large').attr("src", right_large_next);
+                var right_large_maxi_img = $('#right_large_maxi').attr("src");
+                var right_large_maxi_next = right_large_maxi_img.replace("rauch", "kuhn");
+                $('#right_large_maxi').attr("src", right_large_maxi_next);
+
+                var one_small_img = $('#one_small').attr("src");
+                var one_small_next = one_small_img.replace("rauch", "kuhn");
+                $('#one_small').attr("src", one_small_next);
+                var one_small_maxi_img = $('#one_small_maxi').attr("src");
+                var one_small_maxi_next = one_small_maxi_img.replace("rauch", "kuhn");
+                $('#one_small_maxi').attr("src", one_small_maxi_next);
+
+                var two_small_img = $('#two_small').attr("src");
+                var two_small_next = two_small_img.replace("rauch", "kuhn");
+                $('#two_small').attr("src", two_small_next);
+                var two_small_maxi_img = $('#two_small_maxi').attr("src");
+                var two_small_maxi_next = two_small_maxi_img.replace("rauch", "kuhn");
+                $('#two_small_maxi').attr("src", two_small_maxi_next);
+
+                var three_small_img = $('#three_small').attr("src");
+                var three_small_next = three_small_img.replace("rauch", "kuhn");
+                $('#three_small').attr("src", three_small_next);
+                var three_small_maxi_img = $('#three_small_maxi').attr("src");
+                var three_small_maxi_next = three_small_maxi_img.replace("rauch", "kuhn");
+                $('#three_small_maxi').attr("src", three_small_maxi_next);
+
+                var next_button = $('#kuhn_off').attr("src");
+                var next_button_on = next_button.replace("off", "on");
+                $('#kuhn_off').attr("src", next_button_on);
+                $('#kuhn_off').attr("id", "kuhn_on" );
+                var last_button = $('#rauch_on').attr("src");
+                var last_button_off = last_button.replace("on", "off");
+                $('#rauch_on').attr("src", last_button_off);
+                $('#rauch_on').attr("id", "rauch_off" );
+
+              } else if ($('#grimme_on').is(':visible')) {
+                var left_large_img = $('#left_large').attr("src");
+                var left_large_next = left_large_img.replace("grimme", "kuhn");
+                $('#left_large').attr("src", left_large_next);
+                var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+                var zero_small_maxi_next = zero_small_maxi_img.replace("grimme", "kuhn");
+                $('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+                var right_large_img = $('#right_large').attr("src");
+                var right_large_next = right_large_img.replace("grimme", "kuhn");
+                $('#right_large').attr("src", right_large_next);
+                var right_large_maxi_img = $('#right_large_maxi').attr("src");
+                var right_large_maxi_next = right_large_maxi_img.replace("grimme", "kuhn");
+                $('#right_large_maxi').attr("src", right_large_maxi_next);
+
+                var one_small_img = $('#one_small').attr("src");
+                var one_small_next = one_small_img.replace("grimme", "kuhn");
+                $('#one_small').attr("src", one_small_next);
+                var one_small_maxi_img = $('#one_small_maxi').attr("src");
+                var one_small_maxi_next = one_small_maxi_img.replace("grimme", "kuhn");
+                $('#one_small_maxi').attr("src", one_small_maxi_next);
+
+                var two_small_img = $('#two_small').attr("src");
+                var two_small_next = two_small_img.replace("grimme", "kuhn");
+                $('#two_small').attr("src", two_small_next);
+                var two_small_maxi_img = $('#two_small_maxi').attr("src");
+                var two_small_maxi_next = two_small_maxi_img.replace("grimme", "kuhn");
+                $('#two_small_maxi').attr("src", two_small_maxi_next);
+
+                var three_small_img = $('#three_small').attr("src");
+                var three_small_next = three_small_img.replace("grimme", "kuhn");
+                $('#three_small').attr("src", three_small_next);
+                var three_small_maxi_img = $('#three_small_maxi').attr("src");
+                var three_small_maxi_next = three_small_maxi_img.replace("grimme", "kuhn");
+                $('#three_small_maxi').attr("src", three_small_maxi_next);
+
+                var next_button = $('#kuhn_off').attr("src");
+                var next_button_on = next_button.replace("off", "on");
+                $('#kuhn_off').attr("src", next_button_on);
+                $('#kuhn_off').attr("id", "kuhn_on" );
+                var last_button = $('#grimme_on').attr("src");
+                var last_button_off = last_button.replace("on", "off");
+                $('#grimme_on').attr("src", last_button_off);
+                $('#grimme_on').attr("id", "grimme_off" );
+
+              } else if ($('#lemken_on').is(':visible')) {
+                var left_large_img = $('#left_large').attr("src");
+                var left_large_next = left_large_img.replace("lemken", "kuhn");
+                $('#left_large').attr("src", left_large_next);
+                var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+                var zero_small_maxi_next = zero_small_maxi_img.replace("lemken", "kuhn");
+                $('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+                var right_large_img = $('#right_large').attr("src");
+                var right_large_next = right_large_img.replace("lemken", "kuhn");
+                $('#right_large').attr("src", right_large_next);
+                var right_large_maxi_img = $('#right_large_maxi').attr("src");
+                var right_large_maxi_next = right_large_maxi_img.replace("lemken", "kuhn");
+                $('#right_large_maxi').attr("src", right_large_maxi_next);
+
+                var one_small_img = $('#one_small').attr("src");
+                var one_small_next = one_small_img.replace("lemken", "kuhn");
+                $('#one_small').attr("src", one_small_next);
+                var one_small_maxi_img = $('#one_small_maxi').attr("src");
+                var one_small_maxi_next = one_small_maxi_img.replace("lemken", "kuhn");
+                $('#one_small_maxi').attr("src", one_small_maxi_next);
+
+                var two_small_img = $('#two_small').attr("src");
+                var two_small_next = two_small_img.replace("lemken", "kuhn");
+                $('#two_small').attr("src", two_small_next);
+                var two_small_maxi_img = $('#two_small_maxi').attr("src");
+                var two_small_maxi_next = two_small_maxi_img.replace("lemken", "kuhn");
+                $('#two_small_maxi').attr("src", two_small_maxi_next);
+
+                var three_small_img = $('#three_small').attr("src");
+                var three_small_next = three_small_img.replace("lemken", "kuhn");
+                $('#three_small').attr("src", three_small_next);
+                var three_small_maxi_img = $('#three_small_maxi').attr("src");
+                var three_small_maxi_next = three_small_maxi_img.replace("lemken", "kuhn");
+                $('#three_small_maxi').attr("src", three_small_maxi_next);
+
+                var next_button = $('#kuhn_off').attr("src");
+                var next_button_on = next_button.replace("off", "on");
+                $('#kuhn_off').attr("src", next_button_on);
+                $('#kuhn_off').attr("id", "kuhn_on" );
+                var last_button = $('#lemken_on').attr("src");
+                var last_button_off = last_button.replace("on", "off");
+                $('#lemken_on').attr("src", last_button_off);
+                $('#lemken_on').attr("id", "lemken_off" );
+
+              } else if ($('#krone_on').is(':visible')) {
+                var left_large_img = $('#left_large').attr("src");
+                var left_large_next = left_large_img.replace("krone", "kuhn");
+                $('#left_large').attr("src", left_large_next);
+                var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+                var zero_small_maxi_next = zero_small_maxi_img.replace("krone", "kuhn");
+                $('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+                var right_large_img = $('#right_large').attr("src");
+                var right_large_next = right_large_img.replace("krone", "kuhn");
+                $('#right_large').attr("src", right_large_next);
+                var right_large_maxi_img = $('#right_large_maxi').attr("src");
+                var right_large_maxi_next = right_large_maxi_img.replace("krone", "kuhn");
+                $('#right_large_maxi').attr("src", right_large_maxi_next);
+
+                var one_small_img = $('#one_small').attr("src");
+                var one_small_next = one_small_img.replace("krone", "kuhn");
+                $('#one_small').attr("src", one_small_next);
+                var one_small_maxi_img = $('#one_small_maxi').attr("src");
+                var one_small_maxi_next = one_small_maxi_img.replace("krone", "kuhn");
+                $('#one_small_maxi').attr("src", one_small_maxi_next);
+
+                var two_small_img = $('#two_small').attr("src");
+                var two_small_next = two_small_img.replace("krone", "kuhn");
+                $('#two_small').attr("src", two_small_next);
+                var two_small_maxi_img = $('#two_small_maxi').attr("src");
+                var two_small_maxi_next = two_small_maxi_img.replace("krone", "kuhn");
+                $('#two_small_maxi').attr("src", two_small_maxi_next);
+
+                var three_small_img = $('#three_small').attr("src");
+                var three_small_next = three_small_img.replace("krone", "kuhn");
+                $('#three_small').attr("src", three_small_next);
+                var three_small_maxi_img = $('#three_small_maxi').attr("src");
+                var three_small_maxi_next = three_small_maxi_img.replace("krone", "kuhn");
+                $('#three_small_maxi').attr("src", three_small_maxi_next);
+
+                var next_button = $('#kuhn_off').attr("src");
+                var next_button_on = next_button.replace("off", "on");
+                $('#kuhn_off').attr("src", next_button_on);
+                $('#kuhn_off').attr("id", "kuhn_on" );
+                var last_button = $('#krone_on').attr("src");
+                var last_button_off = last_button.replace("on", "off");
+                $('#krone_on').attr("src", last_button_off);
+                $('#krone_on').attr("id", "krone_off" );
+              } else {}
+            });
+
+            //Wechsel zu lemken 
+            $('#lemken_button').click(function (){
+              if ($('#rauch_on').is(':visible')) {
+                var left_large_img = $('#left_large').attr("src");
+                var left_large_next = left_large_img.replace("rauch", "lemken");
+                $('#left_large').attr("src", left_large_next);
+                var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+                var zero_small_maxi_next = zero_small_maxi_img.replace("rauch", "lemken");
+                $('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+                var right_large_img = $('#right_large').attr("src");
+                var right_large_next = right_large_img.replace("rauch", "lemken");
+                $('#right_large').attr("src", right_large_next);
+                var right_large_maxi_img = $('#right_large_maxi').attr("src");
+                var right_large_maxi_next = right_large_maxi_img.replace("rauch", "lemken");
+                $('#right_large_maxi').attr("src", right_large_maxi_next);
+
+                var one_small_img = $('#one_small').attr("src");
+                var one_small_next = one_small_img.replace("rauch", "lemken");
+                $('#one_small').attr("src", one_small_next);
+                var one_small_maxi_img = $('#one_small_maxi').attr("src");
+                var one_small_maxi_next = one_small_maxi_img.replace("rauch", "lemken");
+                $('#one_small_maxi').attr("src", one_small_maxi_next);
+
+                var two_small_img = $('#two_small').attr("src");
+                var two_small_next = two_small_img.replace("rauch", "lemken");
+                $('#two_small').attr("src", two_small_next);
+                var two_small_maxi_img = $('#two_small_maxi').attr("src");
+                var two_small_maxi_next = two_small_maxi_img.replace("rauch", "lemken");
+                $('#two_small_maxi').attr("src", two_small_maxi_next);
+
+                var three_small_img = $('#three_small').attr("src");
+                var three_small_next = three_small_img.replace("rauch", "lemken");
+                $('#three_small').attr("src", three_small_next);
+                var three_small_maxi_img = $('#three_small_maxi').attr("src");
+                var three_small_maxi_next = three_small_maxi_img.replace("rauch", "lemken");
+                $('#three_small_maxi').attr("src", three_small_maxi_next);
+
+                var next_button = $('#lemken_off').attr("src");
+                var next_button_on = next_button.replace("off", "on");
+                $('#lemken_off').attr("src", next_button_on);
+                $('#lemken_off').attr("id", "lemken_on" );
+                var last_button = $('#rauch_on').attr("src");
+                var last_button_off = last_button.replace("on", "off");
+                $('#rauch_on').attr("src", last_button_off);
+                $('#rauch_on').attr("id", "rauch_off" );
+
+              } else if ($('#grimme_on').is(':visible')) {
+                var left_large_img = $('#left_large').attr("src");
+                var left_large_next = left_large_img.replace("grimme", "lemken");
+                $('#left_large').attr("src", left_large_next);
+                var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+                var zero_small_maxi_next = zero_small_maxi_img.replace("grimme", "lemken");
+                $('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+                var right_large_img = $('#right_large').attr("src");
+                var right_large_next = right_large_img.replace("grimme", "lemken");
+                $('#right_large').attr("src", right_large_next);
+                var right_large_maxi_img = $('#right_large_maxi').attr("src");
+                var right_large_maxi_next = right_large_maxi_img.replace("grimme", "lemken");
+                $('#right_large_maxi').attr("src", right_large_maxi_next);
+
+                var one_small_img = $('#one_small').attr("src");
+                var one_small_next = one_small_img.replace("grimme", "lemken");
+                $('#one_small').attr("src", one_small_next);
+                var one_small_maxi_img = $('#one_small_maxi').attr("src");
+                var one_small_maxi_next = one_small_maxi_img.replace("grimme", "lemken");
+                $('#one_small_maxi').attr("src", one_small_maxi_next);
+
+                var two_small_img = $('#two_small').attr("src");
+                var two_small_next = two_small_img.replace("grimme", "lemken");
+                $('#two_small').attr("src", two_small_next);
+                var two_small_maxi_img = $('#two_small_maxi').attr("src");
+                var two_small_maxi_next = two_small_maxi_img.replace("grimme", "lemken");
+                $('#two_small_maxi').attr("src", two_small_maxi_next);
+
+                var three_small_img = $('#three_small').attr("src");
+                var three_small_next = three_small_img.replace("grimme", "lemken");
+                $('#three_small').attr("src", three_small_next);
+                var three_small_maxi_img = $('#three_small_maxi').attr("src");
+                var three_small_maxi_next = three_small_maxi_img.replace("grimme", "lemken");
+                $('#three_small_maxi').attr("src", three_small_maxi_next);
+
+                var next_button = $('#lemken_off').attr("src");
+                var next_button_on = next_button.replace("off", "on");
+                $('#lemken_off').attr("src", next_button_on);
+                $('#lemken_off').attr("id", "lemken_on" );
+                var last_button = $('#grimme_on').attr("src");
+                var last_button_off = last_button.replace("on", "off");
+                $('#grimme_on').attr("src", last_button_off);
+                $('#grimme_on').attr("id", "grimme_off" );
+
+              } else if ($('#kuhn_on').is(':visible')) {
+                var left_large_img = $('#left_large').attr("src");
+                var left_large_next = left_large_img.replace("kuhn", "lemken");
+                $('#left_large').attr("src", left_large_next);
+                var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+                var zero_small_maxi_next = zero_small_maxi_img.replace("kuhn", "lemken");
+                $('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+                var right_large_img = $('#right_large').attr("src");
+                var right_large_next = right_large_img.replace("kuhn", "lemken");
+                $('#right_large').attr("src", right_large_next);
+                var right_large_maxi_img = $('#right_large_maxi').attr("src");
+                var right_large_maxi_next = right_large_maxi_img.replace("kuhn", "lemken");
+                $('#right_large_maxi').attr("src", right_large_maxi_next);
+
+                var one_small_img = $('#one_small').attr("src");
+                var one_small_next = one_small_img.replace("kuhn", "lemken");
+                $('#one_small').attr("src", one_small_next);
+                var one_small_maxi_img = $('#one_small_maxi').attr("src");
+                var one_small_maxi_next = one_small_maxi_img.replace("kuhn", "lemken");
+                $('#one_small_maxi').attr("src", one_small_maxi_next);
+
+                var two_small_img = $('#two_small').attr("src");
+                var two_small_next = two_small_img.replace("kuhn", "lemken");
+                $('#two_small').attr("src", two_small_next);
+                var two_small_maxi_img = $('#two_small_maxi').attr("src");
+                var two_small_maxi_next = two_small_maxi_img.replace("kuhn", "lemken");
+                $('#two_small_maxi').attr("src", two_small_maxi_next);
+
+                var three_small_img = $('#three_small').attr("src");
+                var three_small_next = three_small_img.replace("kuhn", "lemken");
+                $('#three_small').attr("src", three_small_next);
+                var three_small_maxi_img = $('#three_small_maxi').attr("src");
+                var three_small_maxi_next = three_small_maxi_img.replace("kuhn", "lemken");
+                $('#three_small_maxi').attr("src", three_small_maxi_next);
+
+                var next_button = $('#lemken_off').attr("src");
+                var next_button_on = next_button.replace("off", "on");
+                $('#lemken_off').attr("src", next_button_on);
+                $('#lemken_off').attr("id", "lemken_on" );
+                var last_button = $('#kuhn_on').attr("src");
+                var last_button_off = last_button.replace("on", "off");
+                $('#kuhn_on').attr("src", last_button_off);
+                $('#kuhn_on').attr("id", "kuhn_off" );
+
+              } else if ($('#krone_on').is(':visible')) {
+                var left_large_img = $('#left_large').attr("src");
+                var left_large_next = left_large_img.replace("krone", "lemken");
+                $('#left_large').attr("src", left_large_next);
+                var zero_small_maxi_img = $('#zero_small_maxi').attr("src");
+                var zero_small_maxi_next = zero_small_maxi_img.replace("krone", "lemken");
+                $('#zero_small_maxi').attr("src", zero_small_maxi_next);
+
+                var right_large_img = $('#right_large').attr("src");
+                var right_large_next = right_large_img.replace("krone", "lemken");
+                $('#right_large').attr("src", right_large_next);
+                var right_large_maxi_img = $('#right_large_maxi').attr("src");
+                var right_large_maxi_next = right_large_maxi_img.replace("krone", "lemken");
+                $('#right_large_maxi').attr("src", right_large_maxi_next);
+
+                var one_small_img = $('#one_small').attr("src");
+                var one_small_next = one_small_img.replace("krone", "lemken");
+                $('#one_small').attr("src", one_small_next);
+                var one_small_maxi_img = $('#one_small_maxi').attr("src");
+                var one_small_maxi_next = one_small_maxi_img.replace("krone", "lemken");
+                $('#one_small_maxi').attr("src", one_small_maxi_next);
+
+                var two_small_img = $('#two_small').attr("src");
+                var two_small_next = two_small_img.replace("krone", "lemken");
+                $('#two_small').attr("src", two_small_next);
+                var two_small_maxi_img = $('#two_small_maxi').attr("src");
+                var two_small_maxi_next = two_small_maxi_img.replace("krone", "lemken");
+                $('#two_small_maxi').attr("src", two_small_maxi_next);
+
+                var three_small_img = $('#three_small').attr("src");
+                var three_small_next = three_small_img.replace("krone", "lemken");
+                $('#three_small').attr("src", three_small_next);
+                var three_small_maxi_img = $('#three_small_maxi').attr("src");
+                var three_small_maxi_next = three_small_maxi_img.replace("krone", "lemken");
+                $('#three_small_maxi').attr("src", three_small_maxi_next);
+
+                var next_button = $('#lemken_off').attr("src");
+                var next_button_on = next_button.replace("off", "on");
+                $('#lemken_off').attr("src", next_button_on);
+                $('#lemken_off').attr("id", "lemken_on" );
+                var last_button = $('#krone_on').attr("src");
+                var last_button_off = last_button.replace("on", "off");
+                $('#krone_on').attr("src", last_button_off);
+                $('#krone_on').attr("id", "krone_off" );
+              } else {}
+            });
+
+						//Settings
+
+						$('#settings_button_off').click(function() {
+							$('#schwarzfilter').fadeIn();
+							$('#settings').show();
+							$('#settings_button_on').show();
+
+						});
+
+						$('#settings_button_on').click(function() {
+							$('#schwarzfilter').fadeOut();
+							$('#settings').hide();
+							$('#settings_button_on').hide();
+
+						});
+
+						$('#schwarzfilter').click(function() {
+							$('#schwarzfilter').fadeOut();
+							$('#settings').hide();
+							$('#settings_button_on').hide();
+
+						});
+
+
+				});
+		</script>
+	</head>
+	<body>
+		<div align="center">
+
+			<table>
+				<p id="demo"></p>
+				<p id="demo1"></p>
+				<tr>
+					<td>
+						<div id="inhalt" >
+							<div><img src="bilderallgemein/background.png" width="900"  alt="Hintergrund"></div>
+
+
+							<div><img alt="UT" id="left_large" src="rauch/bilder/horizontal/normalview/left_large/ut.png" style="position:absolute; margin: -33.38em 0 0 5.3em; z-index: 10; width: 22.8em; "></div>
+							<div><img alt="Karte" id="right_large" src="rauch/bilder/horizontal/normalview/right_large/karte.png"  style="position:absolute; margin:-33.38em 0 0 28.21em; z-index: 11; width: 22.8em; "></div>
+
+							<div><img alt="Auswahl" id="auswahl" src="bilderallgemein/auswahl.png"  width="49em"  style="position: absolute; margin: -15.75em 0 0 5.3em; z-index: 7;"></div>
+							<div><img alt="Camera" id="one_small" src="rauch/bilder/horizontal/normalview/small/camera.png"  style="position: absolute; margin: -15.75em 0 0 8.5em; z-index: 1; width: 11.75em; "></div>
+							<div><img alt="TC" id="two_small" src="rauch/bilder/horizontal/normalview/small/tc.png" style="position: absolute; margin: -15.75em 0 0 20.38em; z-index: 2; width: 11.75em; "></div>
+							<div><img alt="Tecu" id="three_small" src="rauch/bilder/horizontal/normalview/small/tecu.png"  style="position: absolute; margin: -15.75em 0 0 32.26em; z-index: 3; width: 11.75em; "></div>
+
+							<div id="zweit">
+								<div><img alt="Camera" id="right_large" src="rauch/bilder/horizontal/normalview/right_large/camera.png" width="365em" style="position: absolute; margin:-33.38em 0 0 28.21em; z-index: 8;"></div>
+								<div><img alt="Camera" id="left_large" src="rauch/bilder/horizontal/normalview/left_large/camera.png"   width="365em"  style="position: absolute; margin: -33.38em 0 0 5.3em; z-index: 9;"></div>
+								<div><img alt="Camera" id="two_small" src="rauch/bilder/horizontal/normalview/small/camera.png"  width="188em"  style="position: absolute; margin: -15.75em 0 0 20.38em; z-index: 10;"></div>
+								<div><img alt="Camera" id="three_small" src="rauch/bilder/horizontal/normalview/small/camera.png"  width="188em"  style="position: absolute; margin: -15.75em 0 0 32.25em; z-index: 11;"></div>
+
+								<div><img alt="UT" id="one_small" src="rauch/bilder/horizontal/normalview/small/ut.png"  width="188em"  style="position: absolute; margin: -15.75em 0 0 8.5em ; z-index: 12;"></div>
+								<div><img alt="UT" id="right_large" src="rauch/bilder/horizontal/normalview/right_large/ut.png"  width="365em" style="position: absolute; margin:-33.38em 0 0 28.21em; z-index: 13;"></div>
+								<div><img alt="UT" id="two_small" src="rauch/bilder/horizontal/normalview/small/ut.png"  width="188em" style="position: absolute; margin: -15.75em 0 0 20.38em; z-index: 14;"></div>
+								<div><img alt="UT" id="three_small" src="rauch/bilder/horizontal/normalview/small/ut.png"  width="188em" style="position: absolute; margin: -15.75em 0 0 32.25em; z-index: 15;"></div>
+
+								<div><img alt="TC" id="left_large" src="rauch/bilder/horizontal/normalview/left_large/tc.png"   width="365em" style="position: absolute; margin: -33.38em 0 0 5.3em ; z-index: 16;"></div>
+								<div><img alt="TC" id="right_large" src="rauch/bilder/horizontal/normalview/right_large/tc.png"   width="365em" style="position: absolute; margin:-33.38em 0 0 28.21em; z-index: 17;"></div>
+								<div><img alt="TC" id="one_small" src="rauch/bilder/horizontal/normalview/small/tc.png" width="188em" style="position: absolute; margin: -15.75em 0 0 8.5em; z-index: 18;"></div>
+								<div><img alt="TC" id="three_small" src="rauch/bilder/horizontal/normalview/small/tc.png" width="188em" style="position: absolute; margin: -15.75em 0 0 32.25em; z-index: 19;"></div>
+
+								<div><img alt="Karte" id="left_large" src="rauch/bilder/horizontal/normalview/left_large/karte.png"  width="365em" style="position: absolute; margin: -33.38em 0 0 5.3em ; z-index: 20;"></div>
+								<div><img alt="Karte" id="one_small" src="rauch/bilder/horizontal/normalview/small/karte.png"  width="188em" style="position: absolute; margin: -15.75em 0 0 8.5em; z-index: 21;"></div>
+								<div><img alt="Karte" id="two_small" src="rauch/bilder/horizontal/normalview/small/karte.png"  width="188emem" style="position: absolute; margin: -15.75em 0 0 20.38em; z-index: 22;"></div>
+								<div><img alt="Karte" id="three_small" src="rauch/bilder/horizontal/normalview/small/karte.png" width="188em" style="position: absolute; margin: -15.75em 0 0 32.25em; z-index: 23;"></div>
+
+								<div><img alt="Tecu" id="left_large" src="rauch/bilder/horizontal/normalview/left_large/tecu.png"  width="365em" style="position: absolute; margin: -33.38em 0 0 5.3em; z-index: 24;"></div>
+								<div><img alt="Tecu" id="right_large" src="rauch/bilder/horizontal/normalview/right_large/tecu.png" width="365em" style="position: absolute; margin:-33.38em 0 0 28.21em; z-index: 25;"></div>
+								<div><img alt="Tecu" id="one_small" src="rauch/bilder/horizontal/normalview/small/tecu.png"  width="188em" style="position: absolute; margin: -15.75em 0 0 8.5em; z-index: 26;"></div>
+								<div><img alt="Tecu" id="two_small" src="rauch/bilder/horizontal/normalview/small/tecu.png" width="188emem" style="position: absolute; margin: -15.75em 0 0 20.38em; z-index: 27;"></div>
+							</div>
+						</div>
+						<div id="maxiv">
+
+							<div><img alt="UT" id="right_large_maxi" src="rauch/bilder/horizontal/maxiview/large/maschine.png" alt="Rauchmaschine"  width="548em" style="position: absolute; margin: -33.38em 0 0 16.9em ; z-index:1;"></div>
+							<div><img alt="UT" id="zero_small_maxi" src="rauch/bilder/horizontal/maxiview/small/maschine.png" width="168em" style="position: absolute; margin: -33.38em 0 0 5.3em ; z-index: 5;"></div>
+							<div><img alt="UT" id="one_small_maxi" src="rauch/bilder/horizontal/maxiview/small/maschine.png" width="168em"  style="position: absolute; margin: -25.4em 0 0 5.3em ; z-index: 6;"></div>
+							<div><img alt="UT" id="two_small_maxi" src="rauch/bilder/horizontal/maxiview/small/maschine.png" width="168em" style="position: absolute; margin: -17.42em 0 0 5.3em ; z-index: 7;"></div>
+							<div><img alt="UT" id="three_small_maxi" src="rauch/bilder/horizontal/maxiview/small/rauchmaschine.png" width="0em"  style="position: absolute; margin: -15.75em 0 0 32.25em; z-index: 15;"></div>
+
+							<div><img alt="Camera" id="right_large_maxi" src="rauch/bilder/horizontal/maxiview/large/kamera.png" width="548em" style="position: absolute; margin: -33.38em 0 0 16.9em ; z-index:2;"></div>
+							<div><img alt="Camera" id="zero_small_maxi" src="rauch/bilder/horizontal/maxiview/small/kamera.png" width="168em"  style="position: absolute; margin: -33.38em 0 0 5.3em ; z-index: 8;"></div>
+							<div><img alt="Camera" id="one_small_maxi" src="rauch/bilder/horizontal/maxiview/small/kamera.png"  width="168em" style="position: absolute; margin: -25.4em 0 0 5.3em ; z-index: 9;"></div>
+							<div><img alt="Camera" id="two_small_maxi" src="rauch/bilder/horizontal/maxiview/small/kamera.png"  width="168em" style="position: absolute; margin: -17.42em 0 0 5.3em ; z-index: 10;"></div>
+							<div><img alt="Camera" id="three_small_maxi" src="rauch/bilder/horizontal/maxiview/small/kamera.png"  width="0em" style="position: absolute; margin: -15.75em 0 0 32.25em; z-index: 11;"></div>
+
+							<div><img alt="Karte" id="right_large_maxi" src="rauch/bilder/horizontal/maxiview/large/karte.png" width="548em" style="position: absolute; margin: -33.38em 0 0 16.9em ; z-index:3;"></div>
+							<div><img alt="Karte" id="zero_small_maxi" src="rauch/bilder/horizontal/maxiview/small/karte.png" width="168em" style="position: absolute; margin: -33.38em 0 0 5.3em ; z-index: 11;"></div>
+							<div><img alt="Karte" id="one_small_maxi" src="rauch/bilder/horizontal/maxiview/small/karte.png" width="168em" style="position: absolute; margin: -25.4em 0 0 5.3em ; z-index: 12;"></div>
+							<div><img alt="Karte" id="two_small_maxi" src="rauch/bilder/horizontal/maxiview/small/karte.png"  width="168em" style="position: absolute; margin: -17.42em 0 0 5.3em ; z-index: 13;"></div>
+							<div><img alt="Karte" id="three_small_maxi" src="rauch/bilder/horizontal/maxiview/small/karte.png" width="0em"  style="position: absolute; margin: -15.75em 0 0 32.25em; z-index: 23;"></div>
+
+							<div><img alt="Tecu" id="right_large_maxi" src="rauch/bilder/horizontal/maxiview/large /control.png"  width="548em" style="position: absolute; margin: -33.38em 0 0 16.9em ; z-index:4;"></div>
+							<div><img alt="Tecu" id="zero_small_maxi" src="rauch/bilder/horizontal/maxiview/small/control.png" width="168em" style="position: absolute; margin: -33.38em 0 0 5.3em ; z-index: 14;"></div>
+							<div><img alt="Tecu" id="one_small_maxi" src="rauch/bilder/horizontal/maxiview/small/control.png" width="168em" style="position: absolute; margin: -25.4em 0 0 5.3em ; z-index: 15;"></div>
+							<div><img alt="Tecu" id="two_small_maxi" src="rauch/bilder/horizontal/maxiview/small/control.png"  width="168em" style="position: absolute; margin: -17.42em 0 0 5.3em ; z-index: 16;"></div>
+							<div><img alt="Tecu"id="three_small_maxi" src="rauch/bilder/horizontal/maxiview/small/control.png"  width="0em" style="position: absolute; margin: -15.75em 0 0 32.25em; z-index: 7;"></div>
+
+
+							<div><img alt="TC" id="zero_small_maxi" src="rauch/bilder/horizontal/maxiview/small/tc.png"   width="168em" style="position: absolute; margin: -33.38em 0 0 5.3em ; z-index: 16;"></div>
+							<div><img alt="TC" id="right_large_maxi" src="rauch/bilder/horizontal/maxiview/large/tc.png"   width="548em" style="position: absolute; margin:-33.38em 0 0 16.9em; z-index: 17;"></div>
+							<div><img alt="TC" id="one_small_maxi" src="rauch/bilder/horizontal/maxiview/small/tc.png" width="168em" style="position: absolute; margin: -25.4em 0 0 5.3em; z-index: 18;"></div>
+							<div><img alt="TC" id="three_small_maxi" src="rauch/bilder/horizontal/maxiview/small/tc.png" width="0em" style="position: absolute; margin: -15.75em 0 0 32.25em; z-index: 19;"></div>
+							<div><img alt="TC" id="two_small_maxi" src="rauch/bilder/horizontal/maxiview/small/tc.png" width="168em"  style="position: absolute; margin: -17.75em 0 0 32.25em; z-index: 6;"></div>
+
+						</div>
+							<div><img id="maxi_auswahl" src="bilderallgemein/auswahlmaxi.png" alt="Auswahl" width="168em" style="position: absolute; margin: -9.33em 0 0 5.8em; z-index: 17;"></div>
+							<div><img id="settings" src="bilderallgemein/settings.png" alt="Settings" width="461.9em" style="position:absolute; margin: -33.38em 0 0 22.45em; z-index: 38;"></div>
+							<div><img id="schwarzfilter" src="bilderallgemein/schwarz.png" alt="SchwarzFilter" width="736em" style="opacity: 0.5; position:absolute; margin: -35.7em 0 0 5.3em; z-index: 36;"></div>
+
+						<div id="buttons">
+							<div><img id="wechsel" src="bilderallgemein/wechsel.png" alt="Wechsel" width="65em"  style="position: absolute; margin: -35.6em 0 0 47em; z-index: 28;"></div>
+							<button id="wechsel_button" style=" width:5em; height:2.4em; position: absolute; margin: -42.8em 0 0 56.4em; z-index: 35; background: transparent;  border: none; color: transparent;">wechsel</button>
+							<div><img id="settings_button_off" src="bilderallgemein/settingsbuttonoff.png" alt="Settings" width="65em" style="position: absolute; margin: -35.6em 0 0 42.75em; z-index: 35;"></div>
+							<div><img id="settings_button_on" src="bilderallgemein/settingsbuttonon.png" alt="Settings" width="65em" style="position: absolute; margin: -35.6em 0 0 42.75em; z-index: 37;"></div>
+							<button id="one_button"  style="width:15.05em; height:10.7em; position: absolute; margin: -18.9em 0 0 9.75em; z-index: 29; background: transparent;  border: none; color: transparent;"> one_button </button>
+							<button id="two_button"  style="width:15.05em; height:10.7em; position: absolute; margin: -18.9em 0 0 24em; z-index: 30; background: transparent; border: none; color: transparent; "> two_button </button>
+							<button id="three_button"  style="width:15.05em; height:10.7em; position: absolute; margin: -18.9em 0 0 38.25em; z-index: 31; background: transparent; border: none; color: transparent; "> three_button </button>
+							<button id="zero_maxi_button"  style="width:13.45em; height:9.45em; position: absolute; margin: -40.05em 0 0 5.9em; z-index: 32; background: transparent; border: none; color: transparent; "> zero_maxi_button </button>
+							<button id="one_maxi_button"  style="width:13.45em; height:9.45em; position: absolute; margin: -30.45em 0 0 5.9em; z-index: 33; background: transparent; border: none ; color: transparent; "> one_maxi_button </button>
+							<button id="two_maxi_button"  style="width:13.45em; height:9.45em; position: absolute; margin: -20.9em 0 0 5.9em; z-index: 34; background: transparent; border: none ; color: transparent; "> two_maxi_button </button>
+
+						</div>
+					</td>
+					<td >
+						<ul>
+							<p><img src="maschinen/grimme.png" width="80"> </p>
+							<p><img src="maschinen/krone.jpg" width="80"> </p>
+							<p><img src="maschinen/kuhn.jpg" width="80"> </p>
+							<p><img src="maschinen/lemken.jpg" width="80"> </p>
+							<p><img src="maschinen/rauchaxis.png" width="80"> </p>
+
+						</ul>
+					</td>
+					<td>
+						<ul>
+              <br>
+							 <p> <img id="grimme_off"src="maschinen/off.png" style="z-index: 30;"><button id="grimme_button"  style=" position: absolute; margin: -0em 0 0 -3.5em; width:3.5em; height:3.5em; z-index: 29;  background: transparent; border: none ; color: transparent;"> one_button </button></p><br>
+							 <p> <img id="krone_off" src="maschinen/off.png" style="z-index: 31;"><button id="krone_button"  style=" position: absolute; margin: -0em 0 0 -3.5em; width:3.5em; height:3.5em; z-index: 29;  background: transparent; border: none ; color: transparent;"> one_button </button></p><br>
+							 <p> <img id="kuhn_off" src="maschinen/off.png" style="z-index: 32;"><button id="kuhn_button"  style=" position: absolute; margin: -0em 0 0 -3.5em; width:3.5em; height:3.5em; z-index: 29;  background: transparent; border: none ; color: transparent;"> one_button </button></p><br>
+							 <p> <img id="lemken_off" src="maschinen/off.png" style="z-index: 33;"><button id="lemken_button"  style=" position: absolute; margin: -0em 0 0 -3.5em; width:3.5em; height:3.5em; z-index: 29;  background: transparent; border: none ; color: transparent;"> one_button </button></p><br>
+							 <p> <img id="rauch_on" src="maschinen/on.png" style="z-index: 34;"><button id="rauch_button"  style=" position: absolute; margin: -0em 0 0 -3.5em; width:3.5em; height:3.5em; z-index: 29;  background: transparent; border: none ; color: transparent;"> one_button </button></p><br>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+
+	</body>
+</html>
