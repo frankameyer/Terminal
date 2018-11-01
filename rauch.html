@@ -1,0 +1,1499 @@
+﻿<!doctype html>
+<html lang="de">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initiale-scale=1">
+		<script src="https://code.jquery.com/jquery-latest.js"></script>
+		<link rel="stylesheet" href="main.css">
+		
+		<title> Rauch </title>
+		
+		
+		<script>
+			$(document).ready(function(){
+			
+				var masch = $('#maschine').is(':visible');
+				var masch1 = $('#maschine1').is(':visible');
+				var masch2 = $('#maschine2').is(':visible');
+				var masch3 = $('#maschine3').is(':visible');
+				var masch4 = $('#maschine4').is(':visible');
+				var kam = $('#kamera').is(':visible');
+				var kam1 = $('#kamera1').is(':visible');
+				var kam2 = $('#kamera2').is(':visible');
+				var kam3 = $('#kamera3').is(':visible');
+				var kam4 = $('#kamera4').is(':visible');
+				var kar = $('#karte').is(':visible');
+				var kar1 = $('#karte1').is(':visible');
+				var kar2 = $('#karte2').is(':visible');
+				var kar3 = $('#karte3').is(':visible');
+				var kar4 = $('#karte4').is(':visible');
+				var fel = $('#feldinf').is(':visible');
+				var fel1 = $('#feldinf1').is(':visible');
+				var fel2 = $('#feldinf2').is(':visible');
+				var fel3 = $('#feldinf3').is(':visible');
+				var fel4 = $('#feldinf4').is(':visible');
+				var con = $('#control').is(':visible');
+				var con1 = $('#control1').is(':visible');
+				var con2 = $('#control2').is(':visible');
+				var con3 = $('#control3').is(':visible');
+				var con4 = $('#control4').is(':visible');
+				
+				
+				
+					$('#kamera').hide();
+					$('#kamera1').hide();
+					$('#kamera3').hide();
+					$('#kamera4').hide();
+					$('#karte').hide();
+					$('#karte2').hide();
+					$('#karte3').hide();
+					$('#karte4').hide();
+					$('#maschine1').hide();
+					$('#maschine2').hide();
+					$('#maschine3').hide();
+					$('#maschine4').hide();
+					$('#feldinf').hide();
+					$('#feldinf1').hide();
+					$('#feldinf2').hide();
+					$('#feldinf4').hide();
+					$('#control').hide();
+					$('#control1').hide();
+					$('#control2').hide();
+					$('#control3').hide();
+					
+					$('#maschine0').hide();
+					$('#maschine01').hide();
+					$('#maschine02').hide();
+					$('#maschine03').hide();
+					$('#kamera0').hide();
+					$('#kamera01').hide();
+					$('#kamera02').hide();
+					$('#kamera03').hide();
+					$('#karte0').hide();
+					$('#karte01').hide();
+					$('#karte02').hide();
+					$('#karte03').hide();
+					$('#control0').hide();
+					$('#control01').hide();
+					$('#control02').hide();
+					$('#control03').hide();
+					$('#auswahl0').hide();
+				
+				//Normalansicht
+					//Wechsel
+						$('#wechsel').click(function(){
+							if ($('#kamera').is(':visible') & $('#karte1').is(':visible')){
+								$('#kamera').hide();
+								$('#karte1').hide();
+								$('#kamera1').show();
+								$('#karte').show();
+							} else if ($('#kamera').is(':visible') & $('#maschine1').is(':visible')){
+								$('#kamera').hide('slow');
+								$('#maschine1').hide('slow');
+								$('#kamera1').show('slow');
+								$('#maschine').show('slow');
+							} else if ($('#kamera').is(':visible') & $('#feldinf1').is(':visible')){
+								$('#kamera').hide('slow');
+								$('#feldinf1').hide('slow');
+								$('#kamera1').show('slow');
+								$('#feldinf').show('slow');
+							} else if ($('#kamera').is(':visible') & $('#control1').is(':visible')){
+								$('#kamera').hide('slow');
+								$('#control1').hide('slow');
+								$('#kamera1').show('slow');
+								$('#control').show('slow');
+								
+							} else if ($('#karte').is(':visible') & $('#kamera1').is(':visible')){
+								$('#karte').hide('slow');
+								$('#kamera1').hide('slow');
+								$('#karte1').show('slow');
+								$('#kamera').show('slow');
+							} else if ($('#karte').is(':visible') & $('#maschine1').is(':visible')){
+								$('#karte').hide('slow');
+								$('#maschine1').hide('slow');
+								$('#karte1').show('slow');
+								$('#maschine').show('slow');
+							} else if ($('#karte').is(':visible') & $('#feldinf1').is(':visible')){
+								$('#karte').hide('slow');
+								$('#feldinf1').hide('slow');
+								$('#karte1').show('slow');
+								$('#feldinf').show('slow');
+							} else if ($('#karte').is(':visible') & $('#control1').is(':visible')){
+								$('#karte').hide('slow');
+								$('#control1').hide('slow');
+								$('#karte1').show('slow');
+								$('#control').show('slow');
+								
+							} else if ($('#maschine').is(':visible') & $('#kamera1').is(':visible')){
+								$('#maschine').hide('slow');
+								$('#kamera1').hide('slow');
+								$('#maschine1').show('slow');
+								$('#kamera').show('slow');
+							} else if ($('#maschine').is(':visible') & $('#karte1').is(':visible')){
+								$('#maschine').hide('slow');
+								$('#karte1').hide('slow');
+								$('#maschine1').show('slow');
+								$('#karte').show('slow');
+							} else if ($('#maschine').is(':visible') & $('#feldinf1').is(':visible')){
+								$('#maschine').hide('slow');
+								$('#feldinf1').hide('slow');
+								$('#maschine1').show('slow');
+								$('#feldinf').show('slow');
+							} else if ($('#maschine').is(':visible') & $('#control1').is(':visible')){
+								$('#maschine').hide('slow');
+								$('#control1').hide('slow');
+								$('#maschine1').show('slow');
+								$('#control').show('slow');
+								
+							} else if ($('#feldinf').is(':visible') & $('#kamera1').is(':visible')){
+								$('#feldinf').hide('slow');
+								$('#kamera1').hide('slow');
+								$('#feldinf1').show('slow');
+								$('#kamera').show('slow');
+							} else if ($('#feldinf').is(':visible') & $('#karte1').is(':visible')){
+								$('#feldinf').hide('slow');
+								$('#karte1').hide('slow');
+								$('#feldinf1').show('slow');
+								$('#karte').show('slow');
+							} else if ($('#feldinf').is(':visible') & $('#maschine1').is(':visible')){
+								$('#feldinf').hide('slow');
+								$('#maschine1').hide('slow');
+								$('#feldinf1').show('slow');
+								$('#maschine').show('slow');
+							} else if ($('#feldinf').is(':visible') & $('#control1').is(':visible')){
+								$('#feldinf').hide('slow');
+								$('#control1').hide('slow');
+								$('#feldinf1').show('slow');
+								$('#control').show('slow');
+							
+							} else if ($('#control').is(':visible') & $('#kamera1').is(':visible')){
+								$('#control').hide('slow');
+								$('#kamera1').hide('slow');
+								$('#control1').show('slow');
+								$('#kamera').show('slow');
+							} else if ($('#control').is(':visible') & $('#karte1').is(':visible')){
+								$('#control').hide('slow');
+								$('#karte1').hide('slow');
+								$('#control1').show('slow');
+								$('#karte').show('slow');
+							} else if ($('#control').is(':visible') & $('#maschine1').is(':visible')){
+								$('#control').hide('slow');
+								$('#maschine1').hide('slow');
+								$('#control1').show('slow');
+								$('#maschine').show('slow');
+							} else if ($('#control').is(':visible') & $('#feldinf1').is(':visible')){
+								$('#control').hide('slow');
+								$('#feldinf1').hide('slow');
+								$('#control1').show('slow');
+								$('#feldinf').show('slow');
+							} else {};
+						});
+					
+					
+					//Maschine an 2
+						$('#maschine2').click(function(){
+							if ($('#kamera').is(':visible')) {
+								$('#maschine2').hide('slow');
+								$('#kamera').hide('slow');
+								$('#maschine').show('slow');
+								$('#kamera2').show('slow');
+							} else if ($('#feldinf').is(':visible')) {
+								$('#maschine2').hide('slow');
+								$('#feldinf').hide('slow');
+								$('#maschine').show('slow');
+								$('#feldinf2').show('slow');
+							} else if ($('#control').is(':visible')) {
+								$('#maschine2').hide('slow');
+								$('#control').hide('slow');
+								$('#maschine').show('slow');
+								$('#control2').show('slow');
+							} else if ($('#karte').is(':visible')) {
+								$('#maschine2').hide('slow');
+								$('#karte').hide('slow');
+								$('#maschine').show('slow');
+								$('#karte2').show('slow');
+							} else { }
+						});
+						
+					//Maschine an 3
+						$('#maschine3').click(function(){
+							if ($('#kamera').is(':visible')) {
+								$('#maschine3').hide('slow');
+								$('#kamera').hide('slow');
+								$('#maschine').show('slow');
+								$('#kamera3').show('slow');
+							} else if ($('#feldinf').is(':visible')) {
+								$('#maschine3').hide('slow');
+								$('#feldinf').hide('slow');
+								$('#maschine').show('slow');
+								$('#feldinf3').show('slow');
+							} else if ($('#control').is(':visible')) {
+								$('#maschine3').hide('slow');
+								$('#control').hide('slow');
+								$('#maschine').show('slow');
+								$('#control3').show('slow');
+							} else if ($('#karte').is(':visible')) {
+								$('#maschine3').hide('slow');
+								$('#karte').hide('slow');
+								$('#maschine').show('slow');
+								$('#karte3').show('slow');
+							} else { }
+						});
+						
+					
+					//Maschine an 4
+						$('#maschine4').click(function(){
+							if ($('#kamera').is(':visible')) {
+								$('#maschine4').hide('slow');
+								$('#kamera').hide('slow');
+								$('#maschine').show('slow');
+								$('#kamera4').show('slow');
+							} else if ($('#feldinf').is(':visible')) {
+								$('#maschine4').hide('slow');
+								$('#feldinf').hide('slow');
+								$('#maschine').show('slow');
+								$('#feldinf4').show('slow');
+							} else if ($('#control').is(':visible')) {
+								$('#maschine4').hide('slow');
+								$('#control').hide('slow');
+								$('#maschine').show('slow');
+								$('#control4').show('slow');
+							} else if ($('#karte').is(':visible')) {
+								$('#maschine4').hide('slow');
+								$('#karte').hide('slow');
+								$('#maschine').show('slow');
+								$('#karte4').show('slow');
+							} else { }
+						});	
+						
+						
+					//Feldinf an 2
+						$('#feldinf2').click(function(){
+							if ($('#kamera').is(':visible')) {
+								$('#feldinf2').hide('slow');
+								$('#kamera').hide('slow');
+								$('#feldinf').show('slow');
+								$('#kamera2').show('slow');
+							} else if ($('#maschine').is(':visible')) {
+								$('#feldinf2').hide('slow');
+								$('#maschine').hide('slow');
+								$('#feldinf').show('slow');
+								$('#maschine2').show('slow');
+							} else if ($('#control').is(':visible')) {
+								$('#feldinf2').hide('slow');
+								$('#control').hide('slow');
+								$('#feldinf').show('slow');
+								$('#control2').show('slow');
+							} else if ($('#karte').is(':visible')) {
+								$('#feldinf2').hide('slow');
+								$('#karte').hide('slow');
+								$('#feldinf').show('slow');
+								$('#karte2').show('slow');
+							} else { }
+						});
+						
+					//Feldinf an 3
+						$('#feldinf3').click(function(){
+						
+							if ($('#kamera').is(':visible')) {
+								$('#feldinf3').hide('slow');
+								$('#kamera').hide('slow');
+								$('#feldinf').show('slow');
+								$('#kamera3').show('slow');
+							} else if ($('#maschine').is(':visible')) {
+								$('#feldinf3').hide('slow');
+								$('#maschine').hide('slow');
+								$('#feldinf').show('slow');
+								$('#maschine3').show('slow');
+							} else if ($('#control').is(':visible')) {
+								$('#feldinf3').hide('slow');
+								$('#control').hide('slow');
+								$('#feldinf').show('slow');
+								$('#control3').show('slow');
+							} else if ($('#karte').is(':visible')) {
+								$('#feldinf3').hide('slow');
+								$('#karte').hide('slow');
+								$('#feldinf').show('slow');
+								$('#karte3').show('slow');
+							} else { 
+								alert('bla')
+							};
+						});
+					
+					//Feldinf an 4
+						$('#feldinf4').click(function(){
+							if ($('#kamera').is(':visible')) {
+								$('#feldinf4').hide('slow');
+								$('#kamera').hide('slow');
+								$('#feldinf').show('slow');
+								$('#kamera4').show('slow');
+							} else if ($('#maschine').is(':visible')) {
+								$('#feldinf4').hide('slow');
+								$('#maschine').hide('slow');
+								$('#feldinf').show('slow');
+								$('#maschine4').show('slow');
+							} else if ($('#control').is(':visible')) {
+								$('#feldinf4').hide('slow');
+								$('#control').hide('slow');
+								$('#feldinf').show('slow');
+								$('#control4').show('slow');
+							} else if ($('#karte').is(':visible')) {
+								$('#feldinf4').hide('slow');
+								$('#karte').hide('slow');
+								$('#feldinf').show('slow');
+								$('#karte4').show('slow');
+							} else { }
+						});
+					
+					//Kamera an 2
+						$('#kamera2').click(function(){
+							if ($('#feldinf').is(':visible')) {
+								$('#kamera2').hide('slow');
+								$('#feldinf').hide('slow');
+								$('#kamera').show('slow');
+								$('#feldinf2').show('slow');
+							} else if ($('#maschine').is(':visible')) {
+								$('#kamera2').hide('slow');
+								$('#maschine').hide('slow');
+								$('#kamera').show('slow');
+								$('#maschine2').show('slow');
+							} else if ($('#control').is(':visible')) {
+								$('#kamera2').hide('slow');
+								$('#control').hide('slow');
+								$('#kamera').show('slow');
+								$('#control2').show('slow');
+							} else if ($('#karte').is(':visible')) {
+								$('#kamera2').hide('slow');
+								$('#karte').hide('slow');
+								$('#kamera').show('slow');
+								$('#karte2').show('slow');
+							} else { }
+						});
+					
+					//Kamera an 3
+						$('#kamera3').click(function(){
+							if ($('#feldinf').is(':visible')) {
+								$('#kamera3').hide('slow');
+								$('#feldinf').hide('slow');
+								$('#kamera').show('slow');
+								$('#feldinf3').show('slow');
+							} else if ($('#maschine').is(':visible')) {
+								$('#kamera3').hide('slow');
+								$('#maschine').hide('slow');
+								$('#kamera').show('slow');
+								$('#maschine3').show('slow');
+							} else if ($('#control').is(':visible')) {
+								$('#kamera3').hide('slow');
+								$('#control').hide('slow');
+								$('#kamera').show('slow');
+								$('#control3').show('slow');
+							} else if ($('#karte').is(':visible')) {
+								$('#kamera3').hide('slow');
+								$('#karte').hide('slow');
+								$('#kamera').show('slow');
+								$('#karte3').show('slow');
+							} else { }
+						});
+								
+					//Kamera an 4
+						$('#kamera4').click(function(){
+							if ($('#feldinf').is(':visible')) {
+								$('#kamera4').hide('slow');
+								$('#feldinf').hide('slow');
+								$('#kamera').show('slow');
+								$('#feldinf4').show('slow');
+							} else if ($('#maschine').is(':visible')) {
+								$('#kamera4').hide('slow');
+								$('#maschine').hide('slow');
+								$('#kamera').show('slow');
+								$('#maschine4').show('slow');
+							} else if ($('#control').is(':visible')) {
+								$('#kamera4').hide('slow');
+								$('#control').hide('slow');
+								$('#kamera').show('slow');
+								$('#control4').show('slow');
+							} else if ($('#karte').is(':visible')) {
+								$('#kamera4').hide('slow');
+								$('#karte').hide('slow');
+								$('#kamera').show('slow');
+								$('#karte4').show('slow');
+							} else { }
+						});	
+						
+					//Control an 2
+						$('#control2').click(function(){
+							if ($('#feldinf').is(':visible')) {
+								$('#control2').hide('slow');
+								$('#feldinf').hide('slow');
+								$('#control').show('slow');
+								$('#feldinf2').show('slow');
+							} else if ($('#maschine').is(':visible')) {
+								$('#control2').hide('slow');
+								$('#maschine').hide('slow');
+								$('#control').show('slow');
+								$('#maschine2').show('slow');
+							} else if ($('#kamera').is(':visible')) {
+								$('#control2').hide('slow');
+								$('#kamera').hide('slow');
+								$('#control').show('slow');
+								$('#kamera2').show('slow');
+							} else if ($('#karte').is(':visible')) {
+								$('#control2').hide('slow');
+								$('#karte').hide('slow');
+								$('#control').show('slow');
+								$('#karte2').show('slow');
+							} else { }
+						});
+						
+					//Control an 3
+						$('#control3').click(function(){
+							if ($('#feldinf').is(':visible')) {
+								$('#control3').hide('slow');
+								$('#feldinf').hide('slow');
+								$('#control').show('slow');
+								$('#feldinf3').show('slow');
+							} else if ($('#maschine').is(':visible')) {
+								$('#control3').hide('slow');
+								$('#maschine').hide('slow');
+								$('#control').show('slow');
+								$('#maschine3').show('slow');
+							} else if ($('#kamera').is(':visible')) {
+								$('#control3').hide('slow');
+								$('#kamera').hide('slow');
+								$('#control').show('slow');
+								$('#kamera3').show('slow');
+							} else if ($('#karte').is(':visible')) {
+								$('#control3').hide('slow');
+								$('#karte').hide('slow');
+								$('#control').show('slow');
+								$('#karte3').show('slow');
+							} else { }
+						});
+						
+					//Control an 4
+						$('#control4').click(function(){
+							if ($('#feldinf').is(':visible')) {
+								$('#control4').hide('slow');
+								$('#feldinf').hide('slow');
+								$('#control').show('slow');
+								$('#feldinf4').show('slow');
+							} else if ($('#maschine').is(':visible')) {
+								$('#control4').hide('slow');
+								$('#maschine').hide('slow');
+								$('#control').show('slow');
+								$('#maschine4').show('slow');
+							} else if ($('#kamera').is(':visible')) {
+								$('#control4').hide('slow');
+								$('#kamera').hide('slow');
+								$('#control').show('slow');
+								$('#kamera4').show('slow');
+							} else if ($('#karte').is(':visible')) {
+								$('#control4').hide('slow');
+								$('#karte').hide('slow');
+								$('#control').show('slow');
+								$('#karte4').show('slow');
+							} else { }
+						});
+						
+					//Karte an 2
+						$('#karte2').click(function(){
+							if ($('#feldinf').is(':visible')) {
+								$('#karte2').hide('slow');
+								$('#feldinf').hide('slow');
+								$('#karte').show('slow');
+								$('#feldinf2').show('slow');
+							} else if ($('#maschine').is(':visible')) {
+								$('#karte2').hide('slow');
+								$('#maschine').hide('slow');
+								$('#karte').show('slow');
+								$('#maschine2').show('slow');
+							} else if ($('#kamera').is(':visible')) {
+								$('#karte2').hide('slow');
+								$('#kamera').hide('slow');
+								$('#karte').show('slow');
+								$('#kamera2').show('slow');
+							} else if ($('#control').is(':visible')) {
+								$('#karte2').hide('slow');
+								$('#control').hide('slow');
+								$('#karte').show('slow');
+								$('#control2').show('slow');
+							} else { }
+						});
+						
+					//Karte an 3
+						$('#karte3').click(function(){
+							if ($('#feldinf').is(':visible')) {
+								$('#karte3').hide('slow');
+								$('#feldinf').hide('slow');
+								$('#karte').show('slow');
+								$('#feldinf3').show('slow');
+							} else if ($('#maschine').is(':visible')) {
+								$('#karte3').hide('slow');
+								$('#maschine').hide('slow');
+								$('#karte').show('slow');
+								$('#maschine3').show('slow');
+							} else if ($('#kamera').is(':visible')) {
+								$('#karte3').hide('slow');
+								$('#kamera').hide('slow');
+								$('#karte').show('slow');
+								$('#kamera3').show('slow');
+							} else if ($('#control').is(':visible')) {
+								$('#karte3').hide('slow');
+								$('#control').hide('slow');
+								$('#karte').show('slow');
+								$('#control3').show('slow');
+							} else { }
+						});
+						
+					//Karte an 4
+						$('#karte4').click(function(){
+							if ($('#feldinf').is(':visible')) {
+								$('#karte4').hide('slow');
+								$('#feldinf').hide('slow');
+								$('#karte').show('slow');
+								$('#feldinf4').show('slow');
+							} else if (masch) {
+								$('#karte4').hide('slow');
+								$('#maschine').hide('slow');
+								$('#karte').show('slow');
+								$('#maschine4').show('slow');
+							} else if ($('#kamera').is(':visible')) {
+								$('#karte4').hide('slow');
+								$('#kamera').hide('slow');
+								$('#karte').show('slow');
+								$('#kamera4').show('slow');
+							} else if ($('#control').is(':visible')) {
+								$('#karte4').hide('slow');
+								$('#control').hide('slow');
+								$('#karte').show('slow');
+								$('#control4').show('slow');
+							} else { }
+						});
+				//Maxiansicht
+					//Ansichtwechsel
+						$('#maxi').click(function(){
+							if ( $('#maschine').is(':visible') & $('#karte1').is(':visible') & $('#kamera2').is(':visible') & $('#control3').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine').hide('slow');
+								$('#karte1').hide('slow');
+								$('#kamera2').hide('slow');
+								$('#control3').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine0').show('slow');
+								$('#karte01').show('slow');
+								$('#kamera02').show('slow');
+								$('#control03').show('slow');
+								$('#auswahl0').show('slow');
+							} else if ( $('#maschine').is(':visible') & $('#karte2').is(':visible') & $('#kamera3').is(':visible') & $('#control1').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine').hide('slow');
+								$('#karte2').hide('slow');
+								$('#kamera3').hide('slow');
+								$('#control1').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine0').show('slow');
+								$('#karte02').show('slow');
+								$('#kamera03').show('slow');
+								$('#control01').show('slow');
+								$('#auswahl0').show('slow');
+							} else if ($('#maschine').is(':visible') & $('#karte3').is(':visible') & $('#kamera1').is(':visible') & $('#control2').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine').hide('slow');
+								$('#karte3').hide('slow');
+								$('#kamera1').hide('slow');
+								$('#control2').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine0').show('slow');
+								$('#karte03').show('slow');
+								$('#kamera01').show('slow');
+								$('#control02').show('slow');
+								$('#auswahl0').show('slow');
+							} else if ($('#maschine').is(':visible') & $('#karte3').is(':visible') & $('#kamera2').is(':visible') & $('#control1').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine').hide('slow');
+								$('#karte3').hide('slow');
+								$('#kamera2').hide('slow');
+								$('#control1').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine0').show('slow');
+								$('#karte03').show('slow');
+								$('#kamera02').show('slow');
+								$('#control01').show('slow');
+								$('#auswahl0').show('slow');
+							} else if ($('#maschine').is(':visible') & $('#karte2').is(':visible') & $('#kamera1').is(':visible') & $('#control3').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine').hide('slow');
+								$('#karte2').hide('slow');
+								$('#kamera1').hide('slow');
+								$('#control3').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine0').show('slow');
+								$('#karte02').show('slow');
+								$('#kamera01').show('slow');
+								$('#control03').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine').is(':visible') & $('#karte1').is(':visible') & $('#kamera3').is(':visible') & $('#control2').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine').hide('slow');
+								$('#karte1').hide('slow');
+								$('#kamera3').hide('slow');
+								$('#control2').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine0').show('slow');
+								$('#karte01').show('slow');
+								$('#kamera03').show('slow');
+								$('#control02').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine1').is(':visible') & $('#karte').is(':visible') & $('#kamera2').is(':visible') & $('#control3').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine1').hide('slow');
+								$('#karte').hide('slow');
+								$('#kamera2').hide('slow');
+								$('#control3').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine01').show('slow');
+								$('#karte0').show('slow');
+								$('#kamera02').show('slow');
+								$('#control03').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine1').is(':visible') & $('#karte').is(':visible') & $('#kamera3').is(':visible') & $('#control2').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine1').hide('slow');
+								$('#karte').hide('slow');
+								$('#kamera3').hide('slow');
+								$('#control2').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine01').show('slow');
+								$('#karte0').show('slow');
+								$('#kamera03').show('slow');
+								$('#control02').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine1').is(':visible') & $('#karte2').is(':visible') & $('#kamera3').is(':visible') & $('#control').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine1').hide('slow');
+								$('#karte2').hide('slow');
+								$('#kamera3').hide('slow');
+								$('#control').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine01').show('slow');
+								$('#karte02').show('slow');
+								$('#kamera03').show('slow');
+								$('#control0').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine1').is(':visible') & $('#karte2').is(':visible') & $('#kamera').is(':visible') & $('#control3').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine1').hide('slow');
+								$('#karte2').hide('slow');
+								$('#kamera').hide('slow');
+								$('#control3').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine01').show('slow');
+								$('#karte02').show('slow');
+								$('#kamera0').show('slow');
+								$('#control03').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine1').is(':visible') & $('#karte3').is(':visible') & $('#kamera').is(':visible') & $('#control2').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine1').hide('slow');
+								$('#karte3').hide('slow');
+								$('#kamera').hide('slow');
+								$('#control2').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine01').show('slow');
+								$('#karte03').show('slow');
+								$('#kamera0').show('slow');
+								$('#control02').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine1').is(':visible') & $('#karte3').is(':visible') & $('#kamera2').is(':visible') & $('#control').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine1').hide('slow');
+								$('#karte3').hide('slow');
+								$('#kamera2').hide('slow');
+								$('#control').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine01').show('slow');
+								$('#karte03').show('slow');
+								$('#kamera02').show('slow');
+								$('#control0').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine2').is(':visible') & $('#karte').is(':visible') & $('#kamera1').is(':visible') & $('#control3').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine2').hide('slow');
+								$('#karte').hide('slow');
+								$('#kamera1').hide('slow');
+								$('#control3').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine02').show('slow');
+								$('#karte0').show('slow');
+								$('#kamera01').show('slow');
+								$('#control03').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine2').is(':visible') & $('#karte').is(':visible') & $('#kamera3').is(':visible') & $('#control1').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine2').hide('slow');
+								$('#karte').hide('slow');
+								$('#kamera3').hide('slow');
+								$('#control1').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine02').show('slow');
+								$('#karte0').show('slow');
+								$('#kamera03').show('slow');
+								$('#control01').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine2').is(':visible') & $('#karte1').is(':visible') & $('#kamera3').is(':visible') & $('#control').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine2').hide('slow');
+								$('#karte1').hide('slow');
+								$('#kamera3').hide('slow');
+								$('#control').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine02').show('slow');
+								$('#karte01').show('slow');
+								$('#kamera03').show('slow');
+								$('#control0').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine2').is(':visible') & $('#karte1').is(':visible') & $('#kamera').is(':visible') & $('#control3').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine2').hide('slow');
+								$('#karte1').hide('slow');
+								$('#kamera').hide('slow');
+								$('#control3').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine02').show('slow');
+								$('#karte01').show('slow');
+								$('#kamera0').show('slow');
+								$('#control03').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine2').is(':visible') & $('#karte3').is(':visible') & $('#kamera').is(':visible') & $('#control1').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine2').hide('slow');
+								$('#karte3').hide('slow');
+								$('#kamera').hide('slow');
+								$('#control1').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine02').show('slow');
+								$('#karte03').show('slow');
+								$('#kamera0').show('slow');
+								$('#control01').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine2').is(':visible') & $('#karte3').is(':visible') & $('#kamera1').is(':visible') & $('#control').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine2').hide('slow');
+								$('#karte3').hide('slow');
+								$('#kamera1').hide('slow');
+								$('#control').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine02').show('slow');
+								$('#karte03').show('slow');
+								$('#kamera01').show('slow');
+								$('#control0').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine3').is(':visible') & $('#karte').is(':visible') & $('#kamera1').is(':visible') & $('#control2').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine3').hide('slow');
+								$('#karte').hide('slow');
+								$('#kamera1').hide('slow');
+								$('#control2').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine03').show('slow');
+								$('#karte0').show('slow');
+								$('#kamera01').show('slow');
+								$('#control02').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine3').is(':visible') & $('#karte').is(':visible') & $('#kamera2').is(':visible') & $('#control1').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine3').hide('slow');
+								$('#karte').hide('slow');
+								$('#kamera2').hide('slow');
+								$('#control1').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine03').show('slow');
+								$('#karte0').show('slow');
+								$('#kamera02').show('slow');
+								$('#control01').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine3').is(':visible') & $('#karte1').is(':visible') & $('#kamera').is(':visible') & $('#control2').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine3').hide('slow');
+								$('#karte1').hide('slow');
+								$('#kamera').hide('slow');
+								$('#control2').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine03').show('slow');
+								$('#karte01').show('slow');
+								$('#kamera0').show('slow');
+								$('#control02').show('slow');
+								$('#auswahl0').show('slow');
+							} else if ($('#maschine3').is(':visible') & $('#karte1').is(':visible') & $('#kamera2').is(':visible') & $('#control').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine3').hide('slow');
+								$('#karte1').hide('slow');
+								$('#kamera2').hide('slow');
+								$('#control').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine03').show('slow');
+								$('#karte01').show('slow');
+								$('#kamera02').show('slow');
+								$('#control0').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine3').is(':visible') & $('#karte2').is(':visible') & $('#kamera').is(':visible') & $('#control1').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine3').hide('slow');
+								$('#karte2').hide('slow');
+								$('#kamera').hide('slow');
+								$('#control1').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine03').show('slow');
+								$('#karte02').show('slow');
+								$('#kamera0').show('slow');
+								$('#control01').show('slow');
+								$('#auswahl0').show('slow'); 
+							} else if ($('#maschine3').is(':visible') & $('#karte2').is(':visible') & $('#kamera1').is(':visible') & $('#control').is(':visible') & $('#feldinf4').is(':visible')) {
+								$('#maschine3').hide('slow');
+								$('#karte2').hide('slow');
+								$('#kamera1').hide('slow');
+								$('#control').hide('slow');
+								$('#feldinf4').hide('slow');
+								$('#auswahl').hide('slow');
+								$('#maschine03').show('slow');
+								$('#karte02').show('slow');
+								$('#kamera01').show('slow');
+								$('#control0').show('slow');
+								$('#auswahl0').show('slow'); 
+								
+							} else if ( $('#maschine0').is(':visible') & $('#karte01').is(':visible') & $('#kamera02').is(':visible') & $('#control03').is(':visible') ) {
+								$('#maschine').show('slow');
+								$('#karte1').show('slow');
+								$('#kamera2').show('slow');
+								$('#control3').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine0').hide('slow');
+								$('#karte01').hide('slow');
+								$('#kamera02').hide('slow');
+								$('#control03').hide('slow');
+								$('#auswahl0').hide('slow');
+							} else if ( $('#maschine0').is(':visible') & $('#karte02').is(':visible') & $('#kamera03').is(':visible') & $('#control01').is(':visible') ) {
+								$('#maschine').show('slow');
+								$('#karte2').show('slow');
+								$('#kamera3').show('slow');
+								$('#control1').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine0').hide('slow');
+								$('#karte02').hide('slow');
+								$('#kamera03').hide('slow');
+								$('#control01').hide('slow');
+								$('#auswahl0').hide('slow');
+							} else if ($('#maschine0').is(':visible') & $('#karte03').is(':visible') & $('#kamera01').is(':visible') & $('#control02').is(':visible') ) {
+								$('#maschine').show('slow');
+								$('#karte3').show('slow');
+								$('#kamera1').show('slow');
+								$('#control2').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine0').hide('slow');
+								$('#karte03').hide('slow');
+								$('#kamera01').hide('slow');
+								$('#control02').hide('slow');
+								$('#auswahl0').hide('slow');
+							} else if ($('#maschine0').is(':visible') & $('#karte03').is(':visible') & $('#kamera02').is(':visible') & $('#control01').is(':visible') ) {
+								$('#maschine').show('slow');
+								$('#karte3').show('slow');
+								$('#kamera2').hide('slow');
+								$('#control1').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine0').hide('slow');
+								$('#karte03').hide('slow');
+								$('#kamera02').hide('slow');
+								$('#control01').hide('slow');
+								$('#auswahl0').hide('slow');
+							} else if ($('#maschine0').is(':visible') & $('#karte02').is(':visible') & $('#kamera01').is(':visible') & $('#control03').is(':visible') ) {
+								$('#maschine').show('slow');
+								$('#karte2').show('slow');
+								$('#kamera1').show('slow');
+								$('#control3').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine0').hide('slow');
+								$('#karte02').hide('slow');
+								$('#kamera01').hide('slow');
+								$('#control03').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine0').is(':visible') & $('#karte01').is(':visible') & $('#kamera03').is(':visible') & $('#control02').is(':visible') ) {
+								$('#maschine').show('slow');
+								$('#karte1').show('slow');
+								$('#kamera3').show('slow');
+								$('#control2').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine0').hide('slow');
+								$('#karte01').hide('slow');
+								$('#kamera03').hide('slow');
+								$('#control02').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine01').is(':visible') & $('#karte0').is(':visible') & $('#kamera02').is(':visible') & $('#control03').is(':visible') ) {
+								$('#maschine1').show('slow');
+								$('#karte').show('slow');
+								$('#kamera2').show('slow');
+								$('#control3').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine01').hide('slow');
+								$('#karte0').hide('slow');
+								$('#kamera02').hide('slow');
+								$('#control03').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine01').is(':visible') & $('#karte0').is(':visible') & $('#kamera03').is(':visible') & $('#control02').is(':visible') ) {
+								$('#maschine1').show('slow');
+								$('#karte').show('slow');
+								$('#kamera3').show('slow');
+								$('#control2').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine01').hide('slow');
+								$('#karte0').hide('slow');
+								$('#kamera03').hide('slow');
+								$('#control02').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine01').is(':visible') & $('#karte02').is(':visible') & $('#kamera03').is(':visible') & $('#control0').is(':visible') ) {
+								$('#maschine1').show('slow');
+								$('#karte2').show('slow');
+								$('#kamera3').show('slow');
+								$('#control').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine01').hide('slow');
+								$('#karte02').hide('slow');
+								$('#kamera03').hide('slow');
+								$('#control0').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine01').is(':visible') & $('#karte02').is(':visible') & $('#kamera0').is(':visible') & $('#control03').is(':visible') ) {
+								$('#maschine1').show('slow');
+								$('#karte2').show('slow');
+								$('#kamera').show('slow');
+								$('#control3').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine01').hide('slow');
+								$('#karte02').hide('slow');
+								$('#kamera0').hide('slow');
+								$('#control03').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine01').is(':visible') & $('#karte03').is(':visible') & $('#kamera0').is(':visible') & $('#control02').is(':visible') ) {
+								$('#maschine1').show('slow');
+								$('#karte3').show('slow');
+								$('#kamera').show('slow');
+								$('#control2').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine01').hide('slow');
+								$('#karte03').hide('slow');
+								$('#kamera0').hide('slow');
+								$('#control02').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine01').is(':visible') & $('#karte03').is(':visible') & $('#kamera02').is(':visible') & $('#control0').is(':visible') ) {
+								$('#maschine1').show('slow');
+								$('#karte3').show('slow');
+								$('#kamera2').show('slow');
+								$('#control').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine01').hide('slow');
+								$('#karte03').hide('slow');
+								$('#kamera02').hide('slow');
+								$('#control0').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine02').is(':visible') & $('#karte0').is(':visible') & $('#kamera01').is(':visible') & $('#control03').is(':visible') ) {
+								$('#maschine2').show('slow');
+								$('#karte').show('slow');
+								$('#kamera1').show('slow');
+								$('#control3').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine02').hide('slow');
+								$('#karte0').hide('slow');
+								$('#kamera01').hide('slow');
+								$('#control03').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine02').is(':visible') & $('#karte0').is(':visible') & $('#kamera03').is(':visible') & $('#control01').is(':visible') ) {
+								$('#maschine2').show('slow');
+								$('#karte').show('slow');
+								$('#kamera3').show('slow');
+								$('#control1').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine02').hide('slow');
+								$('#karte0').hide('slow');
+								$('#kamera03').hide('slow');
+								$('#control01').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine02').is(':visible') & $('#karte01').is(':visible') & $('#kamera03').is(':visible') & $('#control0').is(':visible') ) {
+								$('#maschine2').show('slow');
+								$('#karte1').show('slow');
+								$('#kamera3').show('slow');
+								$('#control').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine02').hide('slow');
+								$('#karte01').hide('slow');
+								$('#kamera03').hide('slow');
+								$('#control0').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine02').is(':visible') & $('#karte01').is(':visible') & $('#kamera0').is(':visible') & $('#control03').is(':visible') ) {
+								$('#maschine2').show('slow');
+								$('#karte1').show('slow');
+								$('#kamera').show('slow');
+								$('#control3').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine02').hide('slow');
+								$('#karte01').hide('slow');
+								$('#kamera0').hide('slow');
+								$('#control03').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine02').is(':visible') & $('#karte03').is(':visible') & $('#kamera0').is(':visible') & $('#control01').is(':visible') ) {
+								$('#maschine2').show('slow');
+								$('#karte3').show('slow');
+								$('#kamera').show('slow');
+								$('#control1').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine02').hide('slow');
+								$('#karte03').hide('slow');
+								$('#kamera0').hide('slow');
+								$('#control01').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine02').is(':visible') & $('#karte03').is(':visible') & $('#kamera01').is(':visible') & $('#control0').is(':visible') ) {
+								$('#maschine2').show('slow');
+								$('#karte3').show('slow');
+								$('#kamera1').show('slow');
+								$('#control').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine02').hide('slow');
+								$('#karte03').hide('slow');
+								$('#kamera01').hide('slow');
+								$('#control0').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine03').is(':visible') & $('#karte0').is(':visible') & $('#kamera01').is(':visible') & $('#control02').is(':visible')) {
+								$('#maschine3').show('slow');
+								$('#karte').show('slow');
+								$('#kamera1').show('slow');
+								$('#control2').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine03').hide('slow');
+								$('#karte0').hide('slow');
+								$('#kamera01').hide('slow');
+								$('#control02').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine03').is(':visible') & $('#karte0').is(':visible') & $('#kamera02').is(':visible') & $('#control01').is(':visible') ) {
+								$('#maschine3').show('slow');
+								$('#karte').show('slow');
+								$('#kamera2').show('slow');
+								$('#control1').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine03').hide('slow');
+								$('#karte0').hide('slow');
+								$('#kamera02').hide('slow');
+								$('#control01').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine03').is(':visible') & $('#karte01').is(':visible') & $('#kamera0').is(':visible') & $('#control02').is(':visible') ) {
+								$('#maschine3').show('slow');
+								$('#karte1').show('slow');
+								$('#kamera').show('slow');
+								$('#control2').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine03').hide('slow');
+								$('#karte01').hide('slow');
+								$('#kamera0').hide('slow');
+								$('#control02').hide('slow');
+								$('#auswahl0').hide('slow');
+							} else if ($('#maschine03').is(':visible') & $('#karte01').is(':visible') & $('#kamera02').is(':visible') & $('#control0').is(':visible') ) {
+								$('#maschine3').show('slow');
+								$('#karte1').show('slow');
+								$('#kamera2').show('slow');
+								$('#control').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine03').hide('slow');
+								$('#karte01').hide('slow');
+								$('#kamera02').hide('slow');
+								$('#control0').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine03').is(':visible') & $('#karte02').is(':visible') & $('#kamera0').is(':visible') & $('#control01').is(':visible') ) {
+								$('#maschine3').show('slow');
+								$('#karte2').show('slow');
+								$('#kamera').show('slow');
+								$('#control1').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine03').hide('slow');
+								$('#karte02').hide('slow');
+								$('#kamera0').hide('slow');
+								$('#control01').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							} else if ($('#maschine03').is(':visible') & $('#karte02').is(':visible') & $('#kamera01').is(':visible') & $('#control0').is(':visible') ) {
+								$('#maschine3').show('slow');
+								$('#karte2').show('slow');
+								$('#kamera1').show('slow');
+								$('#control').show('slow');
+								$('#feldinf4').show('slow');
+								$('#auswahl').show('slow');
+								$('#maschine03').hide('slow');
+								$('#karte02').hide('slow');
+								$('#kamera01').hide('slow');
+								$('#control0').hide('slow');
+								$('#auswahl0').hide('slow'); 
+							
+							} else {};
+						});
+					
+					//Maschine an 0
+						$('#maschine0').click(function(){
+							if ($('#kamera01').is(':visible')) {
+								$('#maschine0').hide('slow');
+								$('#kamera01').hide('slow');
+								$('#maschine01').show('slow');
+								$('#kamera0').show('slow');
+							} else if ($('#karte01').is(':visible')){
+								$('#maschine0').hide('slow');
+								$('#karte01').hide('slow');
+								$('#maschine01').show('slow');
+								$('#karte0').show('slow');
+							} else if ($('#control01').is(':visible')) {
+								$('#maschine0').hide('slow');
+								$('#control01').hide('slow');
+								$('#maschine01').show('slow');
+								$('#control0').show('slow');
+							} else {}
+						});
+					
+					//Maschine an 2
+						$('#maschine02').click(function(){
+							if ($('#kamera01').is(':visible')) {
+								$('#maschine02').hide('slow');
+								$('#kamera01').hide('slow');
+								$('#maschine01').show('slow');
+								$('#kamera02').show('slow');
+							} else if ($('#karte01').is(':visible')){
+								$('#maschine02').hide('slow');
+								$('#karte01').hide('slow');
+								$('#maschine01').show('slow');
+								$('#karte02').show('slow');
+							} else if ($('#control01').is(':visible')) {
+								$('#maschine02').hide('slow');
+								$('#control01').hide('slow');
+								$('#maschine01').show('slow');
+								$('#control02').show('slow');
+							} else {}
+						});
+					
+					//Maschine an 3
+						$('#maschine03').click(function(){
+							if ($('#kamera01').is(':visible')) {
+								$('#maschine03').hide('slow');
+								$('#kamera01').hide('slow');
+								$('#maschine01').show('slow');
+								$('#kamera03').show('slow');
+							} else if ($('#karte01').is(':visible')){
+								$('#maschine03').hide('slow');
+								$('#karte01').hide('slow');
+								$('#maschine01').show('slow');
+								$('#karte03').show('slow');
+							} else if ($('#control01').is(':visible')) {
+								$('#maschine03').hide('slow');
+								$('#control01').hide('slow');
+								$('#maschine01').show('slow');
+								$('#control03').show('slow');
+							} else {}
+						});
+						
+					//Karte an 0
+						$('#karte0').click(function(){
+							if ($('#kamera01').is(':visible')) {
+								$('#karte0').hide('slow');
+								$('#kamera01').hide('slow');
+								$('#karte01').show('slow');
+								$('#kamera0').show('slow');
+							} else if ($('#maschine01').is(':visible')){
+								$('#karte0').hide('slow');
+								$('#maschine01').hide('slow');
+								$('#karte01').show('slow');
+								$('#maschine0').show('slow');
+							} else if ($('#control01').is(':visible')) {
+								$('#karte0').hide('slow');
+								$('#control01').hide('slow');
+								$('#karte01').show('slow');
+								$('#control0').show('slow');
+							} else {}
+						});
+						
+					//Karte an 2
+						$('#karte02').click(function(){
+							if ($('#kamera01').is(':visible')) {
+								$('#karte02').hide('slow');
+								$('#kamera01').hide('slow');
+								$('#karte01').show('slow');
+								$('#kamera02').show('slow');
+							} else if ($('#maschine01').is(':visible')){
+								$('#karte02').hide('slow');
+								$('#maschine01').hide('slow');
+								$('#karte01').show('slow');
+								$('#maschine02').show('slow');
+							} else if ($('#control01').is(':visible')) {
+								$('#karte02').hide('slow');
+								$('#control01').hide('slow');
+								$('#karte01').show('slow');
+								$('#control02').show('slow');
+							} else {}
+						});
+						
+					//Karte an 3
+						$('#karte03').click(function(){
+							if ($('#kamera01').is(':visible')) {
+								$('#karte03').hide('slow');
+								$('#kamera01').hide('slow');
+								$('#karte01').show('slow');
+								$('#kamera03').show('slow');
+							} else if ($('#maschine01').is(':visible')){
+								$('#karte03').hide('slow');
+								$('#maschine01').hide('slow');
+								$('#karte01').show('slow');
+								$('#maschine03').show('slow');
+							} else if ($('#control01').is(':visible')) {
+								$('#karte03').hide('slow');
+								$('#control01').hide('slow');
+								$('#karte01').show('slow');
+								$('#control03').show('slow');
+							} else {}
+						});
+						
+					//Control an 0
+						$('#control0').click(function(){
+							if ($('#kamera01').is(':visible')) {
+								$('#control0').hide('slow');
+								$('#kamera01').hide('slow');
+								$('#control01').show('slow');
+								$('#kamera0').show('slow');
+							} else if ($('#maschine01').is(':visible')){
+								$('#control0').hide('slow');
+								$('#maschine01').hide('slow');
+								$('#control01').show('slow');
+								$('#maschine0').show('slow');
+							} else if ($('#karte01').is(':visible')) {
+								$('#karte01').hide('slow');
+								$('#control0').hide('slow');
+								$('#karte0').show('slow');
+								$('#control01').show('slow');
+							} else {}
+						});
+						
+						
+					//Control an 2
+						$('#control02').click(function(){
+							if ($('#kamera01').is(':visible')) {
+								$('#control02').hide('slow');
+								$('#kamera01').hide('slow');
+								$('#control01').show('slow');
+								$('#kamera02').show('slow');
+							} else if ($('#maschine01').is(':visible')){
+								$('#control02').hide('slow');
+								$('#maschine01').hide('slow');
+								$('#control01').show('slow');
+								$('#maschine02').show('slow');
+							} else if ($('#karte01').is(':visible')) {
+								$('#karte01').hide('slow');
+								$('#control02').hide('slow');
+								$('#karte02').show('slow');
+								$('#control01').show('slow');
+							} else {}
+						});
+						
+						
+					//Control an 3
+						$('#control03').click(function(){
+							if ($('#kamera01').is(':visible')) {
+								$('#control03').hide('slow');
+								$('#kamera01').hide('slow');
+								$('#control01').show('slow');
+								$('#kamera03').show('slow');
+							} else if ($('#maschine01').is(':visible')){
+								$('#control03').hide('slow');
+								$('#maschine01').hide('slow');
+								$('#control01').show('slow');
+								$('#maschine03').show('slow');
+							} else if ($('#karte01').is(':visible')) {
+								$('#karte01').hide('slow');
+								$('#control03').hide('slow');
+								$('#karte03').show('slow');
+								$('#control01').show('slow');
+							} else {}
+						});
+						
+						
+					//Kamera an 0
+						$('#kamera0').click(function(){
+							if ($('#control01').is(':visible')) {
+								$('#kamera0').hide('slow');
+								$('#control01').hide('slow');
+								$('#kamera01').show('slow');
+								$('#control0').show('slow');
+							} else if ($('#maschine01').is(':visible')){
+								$('#kamera0').hide('slow');
+								$('#maschine01').hide('slow');
+								$('#kamera01').show('slow');
+								$('#maschine0').show('slow');
+							} else if ($('#karte01').is(':visible')) {
+								$('#karte01').hide('slow');
+								$('#kamera0').hide('slow');
+								$('#karte0').show('slow');
+								$('#kamera01').show('slow');
+							} else {}
+						});
+						
+					//Kamera an 2
+						$('#kamera02').click(function(){
+							if ($('#control01').is(':visible')) {
+								$('#kamera02').hide('slow');
+								$('#control01').hide('slow');
+								$('#kamera01').show('slow');
+								$('#control02').show('slow');
+							} else if ($('#maschine01').is(':visible')){
+								$('#kamera02').hide('slow');
+								$('#maschine01').hide('slow');
+								$('#kamera01').show('slow');
+								$('#maschine02').show('slow');
+							} else if ($('#karte01').is(':visible')) {
+								$('#karte01').hide('slow');
+								$('#kamera02').hide('slow');
+								$('#karte02').show('slow');
+								$('#kamera01').show('slow');
+							} else {}
+						});
+						
+					//Kamera an 3
+						$('#kamera03').click(function(){
+							if ($('#control01').is(':visible')) {
+								$('#kamera03').hide('slow');
+								$('#control01').hide('slow');
+								$('#kamera01').show('slow');
+								$('#control03').show('slow');
+							} else if ($('#maschine01').is(':visible')){
+								$('#kamera03').hide('slow');
+								$('#maschine01').hide('slow');
+								$('#kamera01').show('slow');
+								$('#maschine03').show('slow');
+							} else if ($('#karte01').is(':visible')) {
+								$('#karte01').hide('slow');
+								$('#kamera03').hide('slow');
+								$('#karte03').show('slow');
+								$('#kamera01').show('slow');
+							} else {}
+						});
+			});
+		
+		</script>
+	</head>
+	<body>
+		<div align="center">
+		
+			<table>
+				<tr>
+					<td>
+						<div id="hintergrundbild" >
+							<img src="bilderallgemein/background.png" width="900"  alt="Hintergrund"  >
+						</div>
+						<div id="inhalt" >
+							<div id="maschine"><img src="rauch/bilder/recht/normal/groß/rauchmaschine.png" alt="Rauchmaschine"  width="365em" class="imgborder" style="position: absolute; margin: -33.38em 0 0 5.29em ; z-index: 5;"></div>
+							<div id="karte1"><img src="rauch/bilder/recht/normal/groß/rauchkarte1.png" alt="Rauchkarte" width="365em" class="imgborder" style="position: absolute; margin:-33.38em 0 0 28.21em; z-index: 3;"></div>
+							
+							<div id="auswahl"><img src="bilderallgemein/auswahl.png" alt="Auswahl" width="49em" class="imgborder" style="position: absolute; margin: -15.75em 0 0 5.3em; z-index: 4;"></div>
+							<div id="kamera2"><img src="rauch/bilder/recht/normal/klein/kamera.png" alt="Kamera" width="188em" class="imgborder" style="position: absolute; margin: -15.75em 0 0 8.5em; z-index: 2;"></div>
+							<div id="feldinf3"><img src="rauch/bilder/recht/normal/klein/rauch.png" alt="feldinf" width="188emem" class="imgborder" style="position: absolute; margin: -15.75em 0 0 20.38em; z-index: 6;"></div>
+							<div id="control4"><img src="rauch/bilder/recht/normal/klein/control.png" alt="Control" width="188em" class="imgborder" style="position: absolute; margin: -15.75em 0 0 32.25em; z-index: 7;"></div>
+							
+							<div id="zweit">
+								<div id="kamera1"><img src="rauch/bilder/recht/normal/groß/kamera.png" alt="Kamera" width="365em" class="imgborder" style="position: absolute; margin:-33.38em 0 0 28.21em; z-index: 8;"></div>
+								<div id="kamera"><img src="rauch/bilder/recht/normal/groß/kamera.png" alt="Kamera"  width="365em" class="imgborder" style="position: absolute; margin: -33.38em 0 0 5.29em; z-index: 9;"></div>
+								<div id="kamera3"><img src="rauch/bilder/recht/normal/klein/kamera.png" alt="Kamera" width="188emem" class="imgborder" style="position: absolute; margin: -15.75em 0 0 20.38em; z-index: 10;"></div>
+								<div id="kamera4"><img src="rauch/bilder/recht/normal/klein/kamera.png" alt="Kamera" width="188em" class="imgborder" style="position: absolute; margin: -15.75em 0 0 32.25em; z-index: 11;"></div>
+								
+								<div id="maschine2"><img src="rauch/bilder/recht/normal/klein/rauchmaschine.png" alt="Rauchmaschine" width="188em" class="imgborder" style="position: absolute; margin: -15.75em 0 0 8.5em ; z-index: 12;"></div>
+								<div id="maschine1"><img src="rauch/bilder/recht/normal/groß/rauchmaschine.png" alt="Rauchmaschine" width="365em" class="imgborder" style="position: absolute; margin:-33.38em 0 0 28.21em; z-index: 13;"></div>
+								<div id="maschine3"><img src="rauch/bilder/recht/normal/klein/rauchmaschine.png" alt="Rauchmaschine" width="188emem" class="imgborder" style="position: absolute; margin: -15.75em 0 0 20.38em; z-index: 14;"></div>
+								<div id="maschine4"><img src="rauch/bilder/recht/normal/klein/rauchmaschine.png" alt="Rauchmaschine" width="188em" class="imgborder" style="position: absolute; margin: -15.75em 0 0 32.25em; z-index: 15;"></div>
+								
+								<div id="feldinf"><img src="rauch/bilder/recht/normal/groß/rauch.png" alt="feldinf"  width="365em" class="imgborder" style="position: absolute; margin: -33.38em 0 0 5.29em ; z-index: 16;"></div>
+								<div id="feldinf1"><img src="rauch/bilder/recht/normal/groß/rauch.png" alt="feldinf" width="365em" class="imgborder" style="position: absolute; margin:-33.38em 0 0 28.21em; z-index: 17;"></div>
+								<div id="feldinf2"><img src="rauch/bilder/recht/normal/klein/rauch.png" alt="feldinf" width="188em" class="imgborder" style="position: absolute; margin: -15.75em 0 0 8.5em; z-index: 18;"></div>
+								<div id="feldinf4"><img src="rauch/bilder/recht/normal/klein/rauch.png" alt="feldinf" width="188em" class="imgborder" style="position: absolute; margin: -15.75em 0 0 32.25em; z-index: 19;"></div>
+								
+								<div id="karte"><img src="rauch/bilder/recht/normal/groß/rauchkarte1.png" alt="Rauchkarte"  width="365em" class="imgborder" style="position: absolute; margin: -33.38em 0 0 5.29em ; z-index: 20;"></div>
+								<div id="karte2"><img src="rauch/bilder/recht/normal/klein/rauchkarte1.png" alt="Rauchkarte" width="188em" class="imgborder" style="position: absolute; margin: -15.75em 0 0 8.5em; z-index: 21;"></div>
+								<div id="karte3"><img src="rauch/bilder/recht/normal/klein/rauchkarte1.png" alt="Rauchkarte" width="188emem" class="imgborder" style="position: absolute; margin: -15.75em 0 0 20.38em; z-index: 22;"></div>
+								<div id="karte4"><img src="rauch/bilder/recht/normal/klein/rauchkarte1.png" alt="Rauchkarte" width="188em" class="imgborder" style="position: absolute; margin: -15.75em 0 0 32.25em; z-index: 23;"></div>
+								
+								<div id="control"><img src="rauch/bilder/recht/normal/groß/control.png" alt="Control"  width="365em" class="imgborder" style="position: absolute; margin: -33.38em 0 0 5.29em; z-index: 24;"></div>
+								<div id="control1"><img src="rauch/bilder/recht/normal/groß/control.png" alt="Control" width="365em" class="imgborder" style="position: absolute; margin:-33.38em 0 0 28.21em; z-index: 25;"></div>
+								<div id="control2"><img src="rauch/bilder/recht/normal/klein/control.png" alt="Control" width="188em" class="imgborder" style="position: absolute; margin: -15.75em 0 0 8.5em; z-index: 26;"></div>
+								<div id="control3"><img src="rauch/bilder/recht/normal/klein/control.png" alt="Control" width="188emem" class="imgborder" style="position: absolute; margin: -15.75em 0 0 20.38em; z-index: 27;"></div>
+							</div>
+						</div>
+						<div id="maxiv">
+							<div id="maschine01"><img src="rauch/bilder/recht/maxi/groß/maschine.png" alt="Rauchmaschine"  width="548em" class="imgborder" style="position: absolute; margin: -33.38em 0 0 16.9em ; z-index:1;"></div>
+							<div id="kamera01"><img src="rauch/bilder/recht/maxi/groß/kamera.png" alt="Kamera" width="548em" class="imgborder" style="position: absolute; margin: -33.38em 0 0 16.9em ; z-index:2;"></div>
+							<div id="karte01"><img src="rauch/bilder/recht/maxi/groß/karte.png" alt="Karte"  width="548em" class="imgborder" style="position: absolute; margin: -33.38em 0 0 16.9em ; z-index:3;"></div>
+							<div id="control01"><img src="rauch/bilder/recht/maxi/groß/control.png" alt="Control"  width="548em" class="imgborder" style="position: absolute; margin: -33.38em 0 0 16.9em ; z-index:4;"></div>
+							
+							<div id="maschine0"><img src="rauch/bilder/recht/maxi/klein/maschine.png" alt="Rauchmaschine" width="168em" class="imgborder" style="position: absolute; margin: -33.38em 0 0 5.3em ; z-index: 5;"></div>
+							<div id="maschine02"><img src="rauch/bilder/recht/maxi/klein/maschine.png" alt="Rauchmaschine" width="168em" class="imgborder" style="position: absolute; margin: -25.4em 0 0 5.3em ; z-index: 6;"></div>
+							<div id="maschine03"><img src="rauch/bilder/recht/maxi/klein/maschine.png" alt="Rauchmaschine" width="168em" class="imgborder" style="position: absolute; margin: -17.42em 0 0 5.3em ; z-index: 7;"></div>
+							<div id="kamera0"><img src="rauch/bilder/recht/maxi/klein/kamera.png" alt="Kamera" width="168em" class="imgborder" style="position: absolute; margin: -33.38em 0 0 5.3em ; z-index: 8;"></div>
+							<div id="kamera02"><img src="rauch/bilder/recht/maxi/klein/kamera.png" alt="Kamera" width="168em" class="imgborder" style="position: absolute; margin: -25.4em 0 0 5.3em ; z-index: 9;"></div>
+							<div id="kamera03"><img src="rauch/bilder/recht/maxi/klein/kamera.png" alt="Kamera" width="168em" class="imgborder" style="position: absolute; margin: -17.42em 0 0 5.3em ; z-index: 10;"></div>
+							<div id="karte0"><img src="rauch/bilder/recht/maxi/klein/karte.png" alt="Karte" width="168em" class="imgborder" style="position: absolute; margin: -33.38em 0 0 5.3em ; z-index: 11;"></div>
+							<div id="karte02"><img src="rauch/bilder/recht/maxi/klein/karte.png" alt="Karte" width="168em" class="imgborder" style="position: absolute; margin: -25.4em 0 0 5.3em ; z-index: 12;"></div>
+							<div id="karte03"><img src="rauch/bilder/recht/maxi/klein/karte.png" alt="Karte" width="168em" class="imgborder" style="position: absolute; margin: -17.42em 0 0 5.3em ; z-index: 13;"></div>
+							<div id="control0"><img src="rauch/bilder/recht/maxi/klein/control.png" alt="Control"width="168em" class="imgborder" style="position: absolute; margin: -33.38em 0 0 5.3em ; z-index: 14;"></div>
+							<div id="control02"><img src="rauch/bilder/recht/maxi/klein/control.png" alt="Control"width="168em" class="imgborder" style="position: absolute; margin: -25.4em 0 0 5.3em ; z-index: 15;"></div>
+							<div id="control03"><img src="rauch/bilder/recht/maxi/klein/control.png" alt="Control" width="168em" class="imgborder" style="position: absolute; margin: -17.42em 0 0 5.3em ; z-index: 16;"></div>
+							<div id="auswahl0"><img src="bilderallgemein/auswahlmaxi.png" alt="Auswahl" width="168em" class="imgborder" style="position: absolute; margin: -9.42em 0 0 5.3em; z-index: 17;"></div>
+						</div>
+						<div id="buttons">
+							<div id="wechsel"><img src="bilderallgemein/wechsel.png" alt="Wechsel" width="65em" class="imgborder" style="position: absolute; margin: -35.6em 0 0 47em; z-index: 28;"></div>
+						</div>
+					</td>
+					<td >
+						<ul>
+							<button  id="maxi"> Maxiview </button>
+							<p><img src="maschinen/grimme.png" width="80"> </p>
+							<p><img src="maschinen/krone.jpg" width="80"> </p>
+							<p><img src="maschinen/kuhn.jpg" width="80"> </p>
+							<p><img src="maschinen/lemken.jpg" width="80"> </p>
+							<p><img src="maschinen/rauchaxis.png" width="80"> </p>
+							
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<br>
+							 <p><a href="grimme.html"> <img src="maschinen/off.png" ></a> </p><br>
+							 <p> <img src="maschinen/off.png"></p><br>
+							 <p> <img src="maschinen/off.png"></p><br>
+							 <p> <img src="maschinen/off.png"></p><br>
+							 <p> <img src="maschinen/on.png"></p>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			
+		</div>
+			
+	</body>
+</html>
